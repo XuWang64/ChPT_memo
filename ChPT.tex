@@ -94,6 +94,7 @@
 \newcommand{\md}{\mathrm{d}}
 \newcommand{\mB}{\mathbf{B}}
 \newcommand{\mO}{\mathcal{O}}
+\newcommand{\mL}{\mathcal{L}}
 \allowdisplaybreaks
 
 
@@ -162,7 +163,7 @@
 
 \subsection{3D散射}
 首先，{\color{red}可以普遍证明}，对于任意势场，$k\mbox{cot}\delta$可以展开为
-\begin{align}
+\begin{align}\label{kcot}
    k\mbox{cot}\delta=-\frac{1}{a_0}+\frac{1}{2}r_0 k^2+\mathcal{O}(k^4)
 \end{align}
 考虑一$s$波的散射，势函数如下，
@@ -172,6 +173,7 @@
           0, & r > \Delta
    \end{cases}
 \end{align}
+其中$a$是散射长度，$r$是有效力程。
 同样可以通过求解薛定谔方程得到$k\mbox{cot}\delta$的关系式，为
 \begin{align}
       k\mbox{cot}\delta=\frac{k(k\mbox{sin}\kappa\Delta+\kappa\mbox{cot}k\Delta\mbox{cos}\kappa\Delta}{k\mbox{cot}k\Delta\mbox{sin}\kappa\Delta-\kappa\mbox{cos}\kappa\Delta}
@@ -180,6 +182,32 @@
 \begin{align}
    k\mbox{cot}\delta=\frac{1}{\Delta}\Big(\frac{\mbox{tan}\alpha}{\alpha}-1\Big)^{-1}+\mathcal{O}(k^2)
 \end{align}
+与(\ref{kcot})比较可得，
+\begin{align}\label{3d_m}
+   a=-\Delta\Big(\frac{\mbox{tan}\alpha}{\alpha}-1\Big)
+\end{align}
+其关系如图所示，
+\begin{figure}[h]\centering
+   \renewcommand{\figurename}{图}
+   \includegraphics{3d_scattering.jpg}
+\end{figure}
+
+可以看到，势$\alpha$随散射长度$a$的变化，当$\alpha_c=(2n+1)\pi/2$时，$a$出现奇异性，对应着束缚态的出现。
+
+\subsection{3D散射中的$\delta$函数}
+
+我们首先给出3D散射下散射振幅
+\begin{align}
+   f=\frac{1}{k\mbox{cot}\delta-\mbox{i}k}
+\end{align}
+观察(\ref{3d_m})，由于$\alpha$是$\mO$(1)，因此$a\sim\mO{\Delta}$，因此当势阱宽度趋于0时，散射振幅也趋于0，这种相互作用称为无关相互作用。因此无法用$\delta$函数来模拟球势阱。
+
+如果我们用场$\psi$表示散射粒子，拉氏密度为
+\begin{align}
+   \mL = \psi^{\dagger}\Big(\mbox{i}\partial_t+\frac{\nabla^2}{2M}\Big)-frac{C_0}{4}\Big(\psi^{\dagger}\psi\Big)^2
+\end{align}
+
+
 \section{手征拉氏量}
 该章主要参考\cite{scherer2011primer}
 
