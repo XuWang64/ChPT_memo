@@ -2,8 +2,13 @@
 
 \bibitem{kaplan2016lectures}
 David~B Kaplan.
+<<<<<<< HEAD
 \newblock Lectures on effective field theory.
 \newblock 2016.
+=======
+\newblock lectures on effective field theory”.
+\newblock {\em arXiv preprint nuclth/0510023}, 5, 5.
+>>>>>>> 5c926a3755e3ce4df159f0c078c3fb924927a960
 
 \bibitem{scherer2011primer}
 Stefan Scherer and Matthias~R Schindler.

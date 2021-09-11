@@ -5,32 +5,54 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
 Database file #1: ChPT.bib
+<<<<<<< HEAD
 Warning--empty journal in kaplan2016lectures
 You've used 2 entries,
             1791 wiz_defined-function locations,
             454 strings with 3715 characters,
 and the built_in function-call counts, 323 in all, are:
 = -- 24
+=======
+You've used 2 entries,
+            1791 wiz_defined-function locations,
+            455 strings with 3744 characters,
+and the built_in function-call counts, 328 in all, are:
+= -- 26
+>>>>>>> 5c926a3755e3ce4df159f0c078c3fb924927a960
 > -- 12
 < -- 1
 + -- 5
 - -- 3
+<<<<<<< HEAD
 * -- 13
 := -- 59
+=======
+* -- 14
+:= -- 61
+>>>>>>> 5c926a3755e3ce4df159f0c078c3fb924927a960
 add.period$ -- 6
 call.type$ -- 2
 change.case$ -- 1
 chr.to.int$ -- 0
+<<<<<<< HEAD
 cite$ -- 3
 duplicate$ -- 18
 empty$ -- 34
 format.name$ -- 3
 if$ -- 69
+=======
+cite$ -- 2
+duplicate$ -- 18
+empty$ -- 34
+format.name$ -- 3
+if$ -- 71
+>>>>>>> 5c926a3755e3ce4df159f0c078c3fb924927a960
 int.to.chr$ -- 0
 int.to.str$ -- 2
 missing$ -- 3
 newline$ -- 13
 num.names$ -- 2
+<<<<<<< HEAD
 pop$ -- 11
 preamble$ -- 1
 purify$ -- 0
@@ -39,12 +61,29 @@ skip$ -- 7
 stack$ -- 0
 substring$ -- 0
 swap$ -- 2
+=======
+pop$ -- 7
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 8
+stack$ -- 0
+substring$ -- 0
+swap$ -- 3
+>>>>>>> 5c926a3755e3ce4df159f0c078c3fb924927a960
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
+<<<<<<< HEAD
 warning$ -- 1
 while$ -- 2
 width$ -- 3
 write$ -- 22
 (There was 1 warning)
+=======
+warning$ -- 0
+while$ -- 2
+width$ -- 3
+write$ -- 24
+>>>>>>> 5c926a3755e3ce4df159f0c078c3fb924927a960
