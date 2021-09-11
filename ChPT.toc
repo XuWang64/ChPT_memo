@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}有效量子力学}{2}{section.1}%
-\contentsline {section}{\numberline {2}手征拉氏量}{2}{section.2}%
-=======
-\babel@toc {english}{}
 \contentsline {section}{\numberline {1}有效量子力学}{2}{section.1}%
 \contentsline {subsection}{\numberline {1}1D散射}{2}{subsection.1.1}%
 \contentsline {subsubsection}{\numberline {1.1}利用$\delta $函数来模仿方势阱}{2}{subsubsection.1.1.1}%
+\contentsline {subsection}{\numberline {2}3D散射}{3}{subsection.1.2}%
 \contentsline {section}{\numberline {2}手征拉氏量}{3}{section.2}%
->>>>>>> 5c926a3755e3ce4df159f0c078c3fb924927a960

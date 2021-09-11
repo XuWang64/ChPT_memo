@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.8.30)  10 SEP 2021 13:16
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.8.30)  11 SEP 2021 19:36
 entering extended mode
 **./ChPT.tex
 (ChPT.tex
@@ -1208,21 +1208,41 @@ Package hyperref Warning: Option `colorlinks' has already been used,
  [1
 
 ]
+
+LaTeX Font Warning: Font shape `U/stmry/m/n' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 146.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 146.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delta' on input line 146.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 146.
+
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <10.53937> not avail
 able
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-130.
- [2] (ChPT.bbl) [3] (ChPT.aux)
+166.
+[2] [3] (ChPT.bbl) [4] (ChPT.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.41063pt have occurred.
+
 Package rerunfilecheck Info: File `ChPT.out' has not changed.
-(rerunfilecheck)             Checksum: C5B8C48621E75CAC0F0EEC396173398E;174.
+(rerunfilecheck)             Checksum: 6E09AA21BCB2A75CD91E1EE8D2385903;487.
  ) 
 Here is how much of TeX's memory you used:
- 30658 strings out of 411335
- 630312 string characters out of 2837000
- 969672 words of memory out of 3000000
- 50494 multiletter control sequences out of 15000+600000
- 410905 words of font info for 78 fonts, out of 8000000 for 9000
+ 30723 strings out of 411335
+ 632953 string characters out of 2837000
+ 983672 words of memory out of 3000000
+ 50549 multiletter control sequences out of 15000+600000
+ 414388 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,6n,97p,415b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,14n,97p,415b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ChPT.pdf (3 pages).
+Output written on ChPT.pdf (4 pages).
