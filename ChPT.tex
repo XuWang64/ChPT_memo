@@ -1,6 +1,6 @@
 \documentclass[aps,tightenlines,16pt]{ctexart}
 
-
+\usepackage{slashed}
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{bbm} %空心字母数字
 \usepackage{ctex}
@@ -210,6 +210,64 @@
 
 \section{手征拉氏量}
 该章主要参考\cite{scherer2011primer}
+
+首先QCD的拉氏量具有如下形式(仅考虑u、d、s夸克)
+\begin{align}
+   \mL=\sum_{i=1}^{3}(\bar{q}_i \mbox{i} \slashed{D} q_i-m_i \bar{q}_i q_i)-\frac{1}{4}\mathcal{G}_{\mu \nu}^a \mathcal{G}^{a \mu \nu} 
+\end{align}
+其中$D_{\mu}=\partial_{\mu}-\mbox{i} g T^a A_{\mu}^a,\ T^a=\lambda^a/2$。仅考虑动能项时，具有$U(3)_L \times U(3)_R$的对称性。量子化之后$U(1)_A$被破坏，系统的对称群为$SU(3)_L \times SU(3)_R \times U(1)_V$，其中$U(1)_V$对应着重子数。由于质量项的存在，$SU(3)_L \times SU(3)_R$遭到了破坏，但当粒子质量相同时，依旧会保持$SU(3)_V$的对称性。
+
+考虑质量项，
+\begin{align}
+   \sum_{i} m_i \bar{q}_i q_i = \sum_{i,j} \bar{q}_{R,i} M_{ij} q_{L,j}
+\end{align}
+其中$M=diag(m_u,m_d,m_s)$。如果我们将质量项升级为场，在最后结果的时候在取回常数，并假设其如下变换，
+\begin{align}
+   M \to RML^{\dagger}
+\end{align}
+则拉氏量依然在$SU(3)_L \times SU(3)_R$变换下不变。
+
+除质量项的显式破缺外，当考虑夸克凝聚的时候，也会产生自发破缺，考虑QCD真空
+\begin{align}
+   \langle 0 | \bar{q}_{R,i} q_{L,j}| 0 \rangle =\Lambda ^3 \delta_{ij}
+\end{align}
+其在$SU(3)_L \times SU(3)_R$下按照$(3,\bar{3})$变换。
+在手征变换下，
+\begin{align}
+   L_{im}\langle 0 | \bar{q}_{R,n} q_{L,m}| 0 \rangle R^{\dagger}_{nj}=\Lambda ^3 U_{ij}
+\end{align}
+其中$U_{ij}=(LR^{\dagger})_{ij}$。当$L=R$时，真空没有变化，此时恰好对应$SU(3)_V$。
+
+我们可以采用和质量类似的方式，将$U$升格为场，并将其参数化为
+\begin{align}
+   U(x)=exp[\frac{i}{f} \phi(x)],\ \phi(x)=T^a \phi^a(x)
+\end{align}
+其中，$\phi^a(x)$为破缺生成的8个Goldstone玻色子。
+
+当N=2时，
+\begin{align}
+   \phi \equiv \sum_{i=1}^{3} \psi_a \sigma^a =
+   \begin{pmatrix}
+      \phi_3 & \phi_1 - \mbox{i} \phi_2 \\
+      \phi_1 + \mbox{i} \phi_2) & -\phi_3
+   \end{pmatrix}
+   =\begin{pmatrix}
+      \pi^0 & \sqrt{2}\pi^+ \\
+      \sqrt{2}\pi^- & \pi^0
+   \end{pmatrix}
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

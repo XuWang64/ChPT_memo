@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.11)  12 SEP 2021 12:12
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.12)  13 SEP 2021 22:04
 entering extended mode
 **./ChPT.tex
 (ChPT.tex
@@ -240,6 +240,9 @@ Package fontspec Info: Font family 'SimSun(0)' created for font 'SimSun' with
 (C:\Users\Xu_\AppData\Local\Programs\MiKTeX\tex/latex/ctex/config\ctex.cfg
 File: ctex.cfg 2021/06/20 v2.5.7 Configuration file (CTEX)
 )
+(C:\Users\Xu_\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\slashed.sty
+Package: slashed 1997/01/16 v0.01 Feynman Slashed Character Notation (DPC)
+)
 (C:\Users\Xu_\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2021/04/20 v2.17j AMS math features
 \@mathmargin=\skip58
@@ -357,10 +360,7 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 108.
-)) (C:\Users\Xu_\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\slashed.sty
-Package: slashed 1997/01/16 v0.01 Feynman Slashed Character Notation (DPC)
-)
-(C:\Users\Xu_\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+)) (C:\Users\Xu_\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (C:\Users\Xu_\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
@@ -1320,21 +1320,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 197.
 
-[3] [4] (ChPT.bbl) [5] (ChPT.aux)
+[3] [4] [5] (ChPT.bbl) [6] (ChPT.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
 Package rerunfilecheck Info: File `ChPT.out' has not changed.
-(rerunfilecheck)             Checksum: 046259DA1724F9553AF17A07100AED26;602.
+(rerunfilecheck)             Checksum: 8802B6EDDD6B1339676714E195C34826;612.
  ) 
 Here is how much of TeX's memory you used:
- 30740 strings out of 411335
- 636830 string characters out of 2833124
+ 30752 strings out of 411335
+ 637559 string characters out of 2833124
  984684 words of memory out of 3000000
- 50563 multiletter control sequences out of 15000+600000
+ 50575 multiletter control sequences out of 15000+600000
  414388 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,14n,97p,415b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ChPT.pdf (5 pages).
+Output written on ChPT.pdf (6 pages).
