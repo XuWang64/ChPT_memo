@@ -271,21 +271,99 @@
 
 \subsection{流代数}
    在正式考虑手征拉氏量的写法之前，我们首先讨论与手征相关的流代数。
-   由Noether定理知道，假设场$\bm{\Phi}_i(x)$进行如下的变化
-   \begin{align}
-      \bm{\Phi}_i(x) \to \bm{\Phi}^{'}_i(x)=\bm{\Phi}_i(x) + \mbox{i}\delta \bm{\Phi}_i(x) = \bm{\Phi}_i(x) - \mbox{i} \epsilon_a F_{a,i}[\bm{\Phi}_i(x)]
-   \end{align}
+在手征极限下，拉氏量可以写为
+\begin{align}
+   \mL_{0} = \sum_{l=u,d,s} (\bar{q}_{R,l} \mbox{i}\slashed{D} q_{R,l} + \bar{q}_{L,l} \mbox{i}\slashed{D} q_{L,l}) -\frac{1}{4}\mathcal{G}_{a\mu\nu}\mathcal{G}_a^{\mu\nu}
+\end{align}
+在$U(3)_L \times U(3)_R$群下，场的变化如下
+\begin{align*}
+   \begin{pmatrix}
+      u_L\\
+      d_L\\
+      s_L
+   \end{pmatrix}
+   \mapsto U_L
+   \begin{pmatrix}
+      u_L\\
+      d_L\\
+      s_L
+   \end{pmatrix}
+   =
+   exp\left(-\mbox{i}\sum_{a=1}^{8}\Theta_{La}\frac{\lambda_a}{2}\right)
+   e^{-\mbox{i}\Theta_L}
+   \begin{pmatrix}
+      u_L\\
+      d_L\\
+      s_L
+   \end{pmatrix}
+\end{align*}
+
+\begin{align}
+   \begin{pmatrix}
+      u_R\\
+      d_R\\
+      s_R
+   \end{pmatrix}
+   \mapsto U_R
+   \begin{pmatrix}
+      u_R\\
+      d_R\\
+      s_R
+   \end{pmatrix}
+   =
+   exp\left(-\mbox{i}\sum_{a=1}^{8}\Theta_{Ra}\frac{\lambda_a}{2}\right)
+   e^{-\mbox{i}\Theta_R}
+   \begin{pmatrix}
+      u_R\\
+      d_R\\
+      s_R
+   \end{pmatrix}
+\end{align}
+则拉氏量的变换为
+\begin{align}
+   \delta \mL_0 = \bar{q}_R \left(\sum_{a=1}^8\partial_{\mu}\varepsilon_{Ra}\frac{\lambda_a}{2}+\partial_{\mu}\varepsilon_R\right)\gamma^{\mu} q_R + \bar{q}_L \left(\sum_{a=1}^8\partial_{\mu}\varepsilon_{La}\frac{\lambda_a}{2}+\partial_{\mu}\varepsilon_R\right)\gamma^{\mu} q_L
+\end{align}
+因此产生的左手流和右手流分别为
+\begin{align}
+   \begin{aligned}
+      L^{\mu}_a &= \bar{q}_L\gamma^{\mu}\frac{\lambda_a}{2}q_L, R^{\mu}_a = \bar{q}_R\gamma^{\mu}\frac{\lambda_a}{2}q_R \\
+      L^{\mu} &= \bar{q}_L\gamma^{\mu}q_L, R^{\mu} = \bar{q}_R\gamma^{\mu}q_R
+   \end{aligned}
+\end{align} 
+其中带有下指标$a$的流称为八重态，不带有的称为单态。
+定义两个单态矢量流和轴矢流为
+\begin{align}
+   V^{\mu} = R^{\mu} + L^{\mu} = \bar{q}\gamma^{\mu}q, 
+   A^{\mu} = R^{\mu} - L^{\mu} = \bar{q}\gamma^{\mu}\gamma_5  q 
+\end{align}
+定义两个八重态矢量流和轴矢流为
+\begin{align}
+   V_a^{\mu} = R_a^{\mu} + L_a^{\mu} = \bar{q}\gamma^{\mu}\frac{\lambda_a}{2} q, 
+   A_a^{\mu} = R_a^{\mu} - L_a^{\mu} = \bar{q}\gamma^{\mu}\gamma_5 \frac{\lambda_a}{2} q 
+\end{align}
+单态矢量流即使在量子化之后依旧守恒，对应重子数守恒，而单态轴矢流在量子化之后出现反常。
+
+定义三个荷算符
+\begin{align}
+   \begin{aligned}
+      Q_{La}(t) &= \int \mbox{d}^3x q_L^{\dagger}(t,\vec{x}) \frac{\lambda_a}{2}q_L(t,\vec{x})\\
+      Q_{Ra}(t) &= \int \mbox{d}^3x q_R^{\dagger}(t,\vec{x}) \frac{\lambda_a}{2}q_R(t,\vec{x})\\
+      Q_{V}(t) &= \int \mbox{d}^3x q^{\dagger}(t,\vec{x}) q(t,\vec{x})
+   \end{aligned}   
+\end{align}
+三个荷算符之间的对易关系恰好对应着$SU(3)_L\times SU(3)_R\times U(1)_V$的李代数
+\begin{align}
+   \begin{aligned}
+      [Q_{La},Q_{Lb}]=\mbox{i}f_{abc}Q_{Lc}, [Q_{Ra},Q_{Rb}]=\mbox{i}f_{abc}Q_{Rc}\\
+      [Q_{La},Q_{Rb}]=[Q_{La},Q_V]=[Q_{Ra},Q_V]=0
+   \end{aligned}
+\end{align}
 
 
 
+\subsection{Goldstone玻色子的实现}
 
-
-
-
-
-\subsection{Goldstone玻色子的非线性实现}
-
-
+  
 
 
 
