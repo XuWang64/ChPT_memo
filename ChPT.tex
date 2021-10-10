@@ -272,7 +272,7 @@
 \subsection{流代数}
    在正式考虑手征拉氏量的写法之前，我们首先讨论与手征相关的流代数。
 在手征极限下，拉氏量可以写为
-\begin{align}
+\begin{align}\label{L_QCD}
    \mL_{0} = \sum_{l=u,d,s} (\bar{q}_{R,l} \mbox{i}\slashed{D} q_{R,l} + \bar{q}_{L,l} \mbox{i}\slashed{D} q_{L,l}) -\frac{1}{4}\mathcal{G}_{a\mu\nu}\mathcal{G}_a^{\mu\nu}
 \end{align}
 在$U(3)_L \times U(3)_R$群下，场的变化如下
@@ -289,8 +289,8 @@
       s_L
    \end{pmatrix}
    =
-   exp\left(-\mbox{i}\sum_{a=1}^{8}\Theta_{La}\frac{\lambda_a}{2}\right)
-   e^{-\mbox{i}\Theta_L}
+   exp\left(-\mbox{i}\sum_{a=1}^{8}\varepsilon_{La}\frac{\lambda_a}{2}\right)
+   e^{-\mbox{i}\varepsilon_L}
    \begin{pmatrix}
       u_L\\
       d_L\\
@@ -311,8 +311,8 @@
       s_R
    \end{pmatrix}
    =
-   exp\left(-\mbox{i}\sum_{a=1}^{8}\Theta_{Ra}\frac{\lambda_a}{2}\right)
-   e^{-\mbox{i}\Theta_R}
+   exp\left(-\mbox{i}\sum_{a=1}^{8}\varepsilon_{Ra}\frac{\lambda_a}{2}\right)
+   e^{-\mbox{i}\varepsilon_R}
    \begin{pmatrix}
       u_R\\
       d_R\\
@@ -362,11 +362,41 @@
 
 
 \subsection{Goldstone玻色子的实现}
+在手征极限下，系统拉氏量(\ref*{L_QCD})具有$SU(3)_L\times SU(3)_R \times U(1)_V$的对称性，但当考虑夸克凝聚的时候，基态只有$SU(3)_V \times U(1)_V$的对称性，系统的对称性发生了自发破缺，生成了8个无质量的Goldstone玻色子。由于真实的夸克带有微小质量，因此拉氏量不具备严格的$SU(3)_L\times SU(3)_R \times U(1)_V$的对称性，破缺得到的Goldstone玻色子带有质量。
 
-  
+一般考虑，假设有大群G，以及它的子群H，拉氏量具有群G对称性，基态具有群H对称性，则会生成$n=n_G-n_H$个Goldstone玻色子，每个Goldstone玻色子用$\phi_i$标记，为光滑实函数，$i=1,...,n$，定义一个n分量的矢量$\bm{\Phi}=(\phi_1,...,\phi_n)$，接着定义一个实向量空间
+\begin{align}
+   M_1 = \{\bm{\Phi}:M^4 \to \mathbb{R^n}| \phi_i: M^4\to R\}
+\end{align}
+定义一个映射$\varphi : G \times M_1 \to M_1$，满足
+\begin{itemize}
+   \item 
+   $\varphi(e,\bm{\Phi})=\bm{\Phi}$
+   \item 
+   $\varphi(g_1,\varphi(g_2,\bm{\Phi}))=\varphi(g_1 g_2 ,\bm{\Phi})$
+\end{itemize}
+用\bm{\Phi}表示$M_1$中的原点，\textcolor{blue}{对应系统的基态构型}，则对于$\forall h \in H$，存在$\varphi(h,0)=0$，从而可以建立起$G/H$陪集与Goldstone玻色子之间的同构关系。可以验证，对于同一陪集中的元素，原点被映射到同一矢量，而不同陪集中的元素将原点映射到不同矢量。
 
+考查Goldstone玻色子在群G下的变换行为，对于每一个$\bm{\Phi}$有一个陪集$\tilde{g}H$与之对应，表示为
+\begin{align*}
+   \varphi(g,\bm{\Phi})=\varphi(\tilde{g}h,0)
+\end{align*}
+接着用$\varphi(g)$作用到$\bm{\Phi}$上
+\begin{align*}
+   \varphi(g,\bm{\Phi})=\varphi(g,\varphi(\tilde{g}h,0))=\bm{\Phi}^{\prime}
+\end{align*}
+即存在关系
+\begin{center}
+\begin{math}
+   \begin{aligned}
+      \bm{\Phi} &\stackrel{g}{\longrightarrow} &\bm{\Phi}^{\prime}\\
+      \downarrow &&\uparrow\\
+      \tilde{g}H &\stackrel{g}{\longrightarrow}& g \tilde{g}H
+   \end{aligned}
+\end{math}
+\end{center}
 
-
+\subsubsection{QCD中的Goldstone玻色子}
 
 
 
