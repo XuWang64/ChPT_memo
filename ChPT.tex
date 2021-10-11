@@ -120,95 +120,95 @@
 \tableofcontents
 \newpage 
 
-\section{有效量子力学}
-该章主要参考\cite{kaplan2016lectures}。
-当我们在描述低能理论时，我们不需要知道其在高能区的表现。代价就是需要引入大量参数，而这些参数只能由实验给出。在考察有效量子场论前，我们先看看有效量子力学。
+% \section{有效量子力学}
+% 该章主要参考\cite{kaplan2016lectures}。
+% 当我们在描述低能理论时，我们不需要知道其在高能区的表现。代价就是需要引入大量参数，而这些参数只能由实验给出。在考察有效量子场论前，我们先看看有效量子力学。
 
-由于在相对论量子力学中，粒子与粒子的相互作用是点点相互作用，因此我们希望通过$\delta$函数来模拟散射势。
-\subsection{1D散射}
-考虑量子力学中的一维散射问题，假设有一方势阱，其函数为
-\begin{align}
-   V(x)=
-   \begin{cases}
-      -\frac{\alpha^2}{2m\Delta}, & 0\leq x \leq \Delta \\
-      0 ,& \mbox{其余情况}
-   \end{cases}   
-\end{align}
-其中$m$为粒子质量，$\Delta$为势阱宽度，$\frac{\alpha^2}{2m\Delta^2}$为势阱深度。可以通过计算薛定谔方程得到反射系数$R$为
-\begin{align}
-   R=\Big[\frac{4\kappa^2 k^2 \mbox{csc}^2(\kappa \Delta)}{(k^2-\kappa^2)}+1\Big]^{-1}
-\end{align}
-其中
-\begin{align}
-   k=\sqrt{2mE},\   \kappa=\sqrt{k^2+\frac{\alpha^2}{\Delta^2}}
-\end{align}
-在低能时，我们可以按照$k$展开反射系数，
-\begin{align}\label{1d_R}
-   R= -\frac{4}{\alpha^2 \mbox{sin}^2\alpha}\Delta^2 k^2 + \mathcal{O}(\Delta^4 k^4)
-\end{align}
-可以看到当$k \to 0$时，$R \to 1$，称这种相互作用为相关相互作用。
+% 由于在相对论量子力学中，粒子与粒子的相互作用是点点相互作用，因此我们希望通过$\delta$函数来模拟散射势。
+% \subsection{1D散射}
+% 考虑量子力学中的一维散射问题，假设有一方势阱，其函数为
+% \begin{align}
+%    V(x)=
+%    \begin{cases}
+%       -\frac{\alpha^2}{2m\Delta}, & 0\leq x \leq \Delta \\
+%       0 ,& \mbox{其余情况}
+%    \end{cases}   
+% \end{align}
+% 其中$m$为粒子质量，$\Delta$为势阱宽度，$\frac{\alpha^2}{2m\Delta^2}$为势阱深度。可以通过计算薛定谔方程得到反射系数$R$为
+% \begin{align}
+%    R=\Big[\frac{4\kappa^2 k^2 \mbox{csc}^2(\kappa \Delta)}{(k^2-\kappa^2)}+1\Big]^{-1}
+% \end{align}
+% 其中
+% \begin{align}
+%    k=\sqrt{2mE},\   \kappa=\sqrt{k^2+\frac{\alpha^2}{\Delta^2}}
+% \end{align}
+% 在低能时，我们可以按照$k$展开反射系数，
+% \begin{align}\label{1d_R}
+%    R= -\frac{4}{\alpha^2 \mbox{sin}^2\alpha}\Delta^2 k^2 + \mathcal{O}(\Delta^4 k^4)
+% \end{align}
+% 可以看到当$k \to 0$时，$R \to 1$，称这种相互作用为相关相互作用。
 
-\subsubsection{利用$\delta$函数来模仿方势阱}
+% \subsubsection{利用$\delta$函数来模仿方势阱}
 
-考虑此时有一$\delta$势阱，
-\begin{align}
-   V(x)=-\frac{g}{2m\Delta}\delta(x)
-\end{align}
-此处引入$\Delta$来保证$g$是无量纲的。依旧通过薛定谔方程可以计算得出反射系数为，
-\begin{align}
-   R=\Big[1+\frac{4k^2\Delta^2}{g^2}\Big]^{-1}=1-\frac{4k^2\Delta^2}{g^2}+\mathcal{O}(k^4)
-\end{align}
-在低能情况下，与(\ref{1d_R})比较可得，
-\begin{align}
-   g=\alpha \mbox{sin}\alpha
-\end{align}
-称为“匹配条件”。
+% 考虑此时有一$\delta$势阱，
+% \begin{align}
+%    V(x)=-\frac{g}{2m\Delta}\delta(x)
+% \end{align}
+% 此处引入$\Delta$来保证$g$是无量纲的。依旧通过薛定谔方程可以计算得出反射系数为，
+% \begin{align}
+%    R=\Big[1+\frac{4k^2\Delta^2}{g^2}\Big]^{-1}=1-\frac{4k^2\Delta^2}{g^2}+\mathcal{O}(k^4)
+% \end{align}
+% 在低能情况下，与(\ref{1d_R})比较可得，
+% \begin{align}
+%    g=\alpha \mbox{sin}\alpha
+% \end{align}
+% 称为“匹配条件”。
 
-\subsection{3D散射}
-首先，{\color{red}可以普遍证明}，对于任意势场，$k\mbox{cot}\delta$可以展开为
-\begin{align}\label{kcot}
-   k\mbox{cot}\delta=-\frac{1}{a_0}+\frac{1}{2}r_0 k^2+\mathcal{O}(k^4)
-\end{align}
-考虑一$s$波的散射，势函数如下，
-\begin{align}
-   V=\begin{cases}
-      -\frac{\alpha^2}{m\Delta^2},& r < \Delta \\
-          0, & r > \Delta
-   \end{cases}
-\end{align}
-其中$a$是散射长度，$r$是有效力程。
-同样可以通过求解薛定谔方程得到$k\mbox{cot}\delta$的关系式，为
-\begin{align}
-      k\mbox{cot}\delta=\frac{k(k\mbox{sin}\kappa\Delta+\kappa\mbox{cot}k\Delta\mbox{cos}\kappa\Delta}{k\mbox{cot}k\Delta\mbox{sin}\kappa\Delta-\kappa\mbox{cos}\kappa\Delta}
-\end{align}
-将其按照$k^2$展开可得，
-\begin{align}
-   k\mbox{cot}\delta=\frac{1}{\Delta}\Big(\frac{\mbox{tan}\alpha}{\alpha}-1\Big)^{-1}+\mathcal{O}(k^2)
-\end{align}
-与(\ref{kcot})比较可得，
-\begin{align}\label{3d_m}
-   a=-\Delta\Big(\frac{\mbox{tan}\alpha}{\alpha}-1\Big)
-\end{align}
-其关系如图所示，
-\begin{figure}[h]\centering
-   \renewcommand{\figurename}{图}
-   \includegraphics{3d_scattering.jpg}
-\end{figure}
+% \subsection{3D散射}
+% 首先，{\color{red}可以普遍证明}，对于任意势场，$k\mbox{cot}\delta$可以展开为
+% \begin{align}\label{kcot}
+%    k\mbox{cot}\delta=-\frac{1}{a_0}+\frac{1}{2}r_0 k^2+\mathcal{O}(k^4)
+% \end{align}
+% 考虑一$s$波的散射，势函数如下，
+% \begin{align}
+%    V=\begin{cases}
+%       -\frac{\alpha^2}{m\Delta^2},& r < \Delta \\
+%           0, & r > \Delta
+%    \end{cases}
+% \end{align}
+% 其中$a$是散射长度，$r$是有效力程。
+% 同样可以通过求解薛定谔方程得到$k\mbox{cot}\delta$的关系式，为
+% \begin{align}
+%       k\mbox{cot}\delta=\frac{k(k\mbox{sin}\kappa\Delta+\kappa\mbox{cot}k\Delta\mbox{cos}\kappa\Delta}{k\mbox{cot}k\Delta\mbox{sin}\kappa\Delta-\kappa\mbox{cos}\kappa\Delta}
+% \end{align}
+% 将其按照$k^2$展开可得，
+% \begin{align}
+%    k\mbox{cot}\delta=\frac{1}{\Delta}\Big(\frac{\mbox{tan}\alpha}{\alpha}-1\Big)^{-1}+\mathcal{O}(k^2)
+% \end{align}
+% 与(\ref{kcot})比较可得，
+% \begin{align}\label{3d_m}
+%    a=-\Delta\Big(\frac{\mbox{tan}\alpha}{\alpha}-1\Big)
+% \end{align}
+% 其关系如图所示，
+% \begin{figure}[h]\centering
+%    \renewcommand{\figurename}{图}
+%    \includegraphics{3d_scattering.jpg}
+% \end{figure}
 
-可以看到，势$\alpha$随散射长度$a$的变化，当$\alpha_c=(2n+1)\pi/2$时，$a$出现奇异性，对应着束缚态的出现。
+% 可以看到，势$\alpha$随散射长度$a$的变化，当$\alpha_c=(2n+1)\pi/2$时，$a$出现奇异性，对应着束缚态的出现。
 
-\subsubsection{3D散射中的$\delta$函数}
+% \subsubsection{3D散射中的$\delta$函数}
 
-我们首先给出3D散射下散射振幅
-\begin{align}
-   f=\frac{1}{k\mbox{cot}\delta-\mbox{i}k}
-\end{align}
-观察(\ref{3d_m})，由于$\alpha$是$\mO$(1)，因此$a\sim\mO(\Delta)$，因此当势阱宽度趋于0时，散射振幅也趋于0，这种相互作用称为无关相互作用。因此无法用$\delta$函数来模拟球势阱。
+% 我们首先给出3D散射下散射振幅
+% \begin{align}
+%    f=\frac{1}{k\mbox{cot}\delta-\mbox{i}k}
+% \end{align}
+% 观察(\ref{3d_m})，由于$\alpha$是$\mO$(1)，因此$a\sim\mO(\Delta)$，因此当势阱宽度趋于0时，散射振幅也趋于0，这种相互作用称为无关相互作用。因此无法用$\delta$函数来模拟球势阱。
 
-如果我们用场$\psi$表示散射粒子，拉氏密度为
-\begin{align}
-   \mL = \psi^{\dagger}\Big(\mbox{i}\partial_t+\frac{\nabla^2}{2M}\Big)\psi-\frac{C_0}{4}\Big(\psi^{\dagger}\psi\Big)^2
-\end{align}
+% 如果我们用场$\psi$表示散射粒子，拉氏密度为
+% \begin{align}
+%    \mL = \psi^{\dagger}\Big(\mbox{i}\partial_t+\frac{\nabla^2}{2M}\Big)\psi-\frac{C_0}{4}\Big(\psi^{\dagger}\psi\Big)^2
+% \end{align}
 
 
 \section{手征拉氏量}
