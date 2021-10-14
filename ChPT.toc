@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-\babel@toc {english}{}
-\contentsline {section}{\numberline {1}有效量子力学}{2}{section.1}%
-\contentsline {subsection}{\numberline {1}1D散射}{2}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1}利用$\delta $函数来模仿方势阱}{2}{subsubsection.1.1.1}%
-\contentsline {subsection}{\numberline {2}3D散射}{3}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {2.1}3D散射中的$\delta $函数}{4}{subsubsection.1.2.1}%
-\contentsline {section}{\numberline {2}手征拉氏量}{4}{section.2}%
-\contentsline {subsection}{\numberline {1}流代数}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2}Goldstone玻色子的非线性实现}{5}{subsection.2.2}%
-=======
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}手征拉氏量}{2}{section.1}%
 \contentsline {subsection}{\numberline {1}流代数}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {2}Goldstone玻色子的实现}{4}{subsection.1.2}%
 \contentsline {subsubsection}{\numberline {2.1}QCD中的Goldstone玻色子}{4}{subsubsection.1.2.1}%
->>>>>>> f3c4665028986f15957ff8107b27b21fb01ecf04
