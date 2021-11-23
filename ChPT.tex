@@ -211,7 +211,7 @@
 % \end{align}
 
 
-\section{手征拉氏量}
+\section{介绍}
 该章主要参考\cite{scherer2011primer}
 
 首先QCD的拉氏量具有如下形式(仅考虑u、d、s夸克)
@@ -396,17 +396,41 @@
 \end{math}
 \end{center}
 
-\subsubsection{QCD中的Goldstone玻色子}
+% \section{线性$\sigma$ 模型}
+% 线性$\sigma$模型的拉氏量如下
+% \begin{align}
+%    \mL = 
+% \end{align}
 
 
 
+\section{介子的手征拉氏量}
+\subsection{手征的power-counting}
+手征拉氏量一般具有如下形式
+\begin{align}
+   \mL_{eff} = \mL_2 + \mL_4 + \mL_4,
+\end{align}
+其中只包含偶数项。这主要是由于Lorentz不变性以及质量项$\sim\mO(q^2)$。
 
+对于给定费曼图，在$p_i \mapsto t p_i$以及$m_q \mapsto t^2 m_q$变换下，若散射振幅变换如下
+\begin{align}
+   M(tp_i,t^2m_q) = t^D M(p_i,m_q),
+\end{align}
+则称D是一个图的手征阶数。手征阶数的计算公式如下
+\begin{align}
+   D = nN_L-2N_I + \sum_{k=1}^{\infty} 2k N_{2k},
+\end{align}
+其来源简单阐述如下，在上述标度变化下，内线的变换为$t^{n-2}$，顶点的变换为$t^{2k-n}$，由于散射矩阵的不变性，以及$S\sim\delta^n(q)M$，因此需要添加一个$n$来补偿$\delta$函数的影响，再考虑到一张图中独立圈数、内线数、顶点数之间的关系$N_L = N_I - (N_V - 1)$，即可得到上式。
 
-
-
-
-
-
+\subsection{手征拉氏量}
+首先每一项的阶数如下，
+\begin{align}
+   U=\mathcal{O}(q^0),D_{\mu}U,r_{\mu},l_{\mu}=\mO (q), f_{L,R \mu \nu}=\mO(q^2), \chi = \mO (q^2),
+\end{align}
+其中$U$是Goldstone玻色子的实现，$U=exp(\mbox{i}\phi_a \lambda_a/F_0)$，而$r_{\mu},l_{\mu}$是协变导数中的规范场，$f_{L,R \mu \nu}$是相应的场强张量，$\chi = 2B_0(s+\mbox{i}p)$。因此可以写出二阶的手征拉式量如下，
+\begin{align}
+   \mL_2 =\frac{F_0^2}{4} Tr[D_{\mu}U (D^{\mu}U)^{\dagger}] + \frac{F_0^2}{4} Tr[\chi U^{\dagger} + U \chi^{\dagger}],
+\end{align}
 
 
 
