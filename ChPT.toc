@@ -4,4 +4,4 @@
 \contentsline {subsection}{\numberline {2}Goldstone玻色子的实现}{4}{subsection.1.2}%
 \contentsline {section}{\numberline {2}介子的手征拉氏量}{5}{section.2}%
 \contentsline {subsection}{\numberline {1}手征的power-counting}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2}手征拉氏量}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2}手征拉氏量}{6}{subsection.2.2}%

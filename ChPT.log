@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.11.23)  23 NOV 2021 16:21
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.11.23)  6 DEC 2021 21:09
 entering extended mode
 **./ChPT.tex
 (ChPT.tex
@@ -1229,9 +1229,9 @@ LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.5393
  [2] [3]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 367.
+(Font)              using `U/stmry/m/n' instead on input line 381.
 
-[4] [5] (ChPT.bbl) [6] (ChPT.aux)
+[4] [5] [6] (ChPT.bbl) [7] (ChPT.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1239,12 +1239,12 @@ Package rerunfilecheck Info: File `ChPT.out' has not changed.
 (rerunfilecheck)             Checksum: 7057868B89F5480FCB8AADA2D9271D22;645.
  ) 
 Here is how much of TeX's memory you used:
- 30687 strings out of 411275
- 633546 string characters out of 2834257
+ 30691 strings out of 411275
+ 633676 string characters out of 2834257
  991829 words of memory out of 3000000
- 50579 multiletter control sequences out of 15000+600000
- 413669 words of font info for 87 fonts, out of 8000000 for 9000
+ 50582 multiletter control sequences out of 15000+600000
+ 413677 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,15n,97p,415b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,18n,97p,415b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ChPT.pdf (6 pages).
+Output written on ChPT.pdf (7 pages).

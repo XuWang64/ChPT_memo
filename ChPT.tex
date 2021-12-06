@@ -212,7 +212,7 @@
 
 
 \section{介绍}
-该章主要参考\cite{scherer2011primer}
+该章主要参考\cite{scherer2011primer}\cite{郑汉青2019量子场论上}。
 
 首先QCD的拉氏量具有如下形式(仅考虑u、d、s夸克)
 \begin{align}
@@ -230,7 +230,7 @@
 \end{align}
 则拉氏量依然在$SU(3)_L \times SU(3)_R$变换下不变。
 
-除质量项的显式破缺外，当考虑夸克凝聚的时候，也会产生自发破缺，考虑QCD真空
+除质量项的显式破缺外，当考虑夸克凝聚的时候，系统也会自发破缺，考虑QCD真空
 \begin{align}
    \langle 0 | \bar{q}_{R,i} q_{L,j}| 0 \rangle =\Lambda ^3 \delta_{ij}
 \end{align}
@@ -241,7 +241,7 @@
 \end{align}
 其中$U_{ij}=(LR^{\dagger})_{ij}$。当$L=R$时，真空没有变化，此时恰好对应$SU(3)_V$。
 
-我们可以采用和质量类似的方式，将$U$升格为场，并将其参数化为
+我们可以采用和质量类似的方式，将$U$升级为场，并将其参数化为
 \begin{align}
    U(x)=exp[\frac{i}{f} \phi(x)],\ \phi(x)=T^a \phi^a(x)
 \end{align}
@@ -273,9 +273,11 @@
    在正式考虑手征拉氏量的写法之前，我们首先讨论与手征相关的流代数。
 在手征极限下，拉氏量可以写为
 \begin{align}\label{L_QCD}
-   \mL_{0} = \sum_{l=u,d,s} (\bar{q}_{R,l} \mbox{i}\slashed{D} q_{R,l} + \bar{q}_{L,l} \mbox{i}\slashed{D} q_{L,l}) -\frac{1}{4}\mathcal{G}_{a\mu\nu}\mathcal{G}_a^{\mu\nu}
+   \mL_{0} = \sum_{l=u,d,s} (\bar{q}_{R,l} \mbox{i}\slashed{D} q_{R,l} + \bar{q}_{L,l} \mbox{i}\slashed{D} q_{L,l}) -\frac{1}{4}\mathcal{G}_{a\mu\nu}\mathcal{G}_a^{\mu\nu}.
 \end{align}
-在$U(3)_L \times U(3)_R$群下，场的变化如下
+由于上述协变导数是作用到色空间中，因此在$U(3)_L \times U(3)_R$味群作用下保持不变。
+
+考虑局域的$U(3)_L \times U(3)_R$群变换，则场的变化如下
 \begin{align*}
    \begin{pmatrix}
       u_L\\
@@ -319,7 +321,7 @@
       s_R
    \end{pmatrix}
 \end{align}
-则拉氏量的变换为
+拉氏量的变换为
 \begin{align}
    \delta \mL_0 = \bar{q}_R \left(\sum_{a=1}^8\partial_{\mu}\varepsilon_{Ra}\frac{\lambda_a}{2}+\partial_{\mu}\varepsilon_R\right)\gamma^{\mu} q_R + \bar{q}_L \left(\sum_{a=1}^8\partial_{\mu}\varepsilon_{La}\frac{\lambda_a}{2}+\partial_{\mu}\varepsilon_R\right)\gamma^{\mu} q_L
 \end{align}
@@ -341,7 +343,19 @@
    V_a^{\mu} = R_a^{\mu} + L_a^{\mu} = \bar{q}\gamma^{\mu}\frac{\lambda_a}{2} q, 
    A_a^{\mu} = R_a^{\mu} - L_a^{\mu} = \bar{q}\gamma^{\mu}\gamma_5 \frac{\lambda_a}{2} q 
 \end{align}
-单态矢量流即使在量子化之后依旧守恒，对应重子数守恒，而单态轴矢流在量子化之后出现反常。
+单态矢量流即使在量子化之后依旧守恒，对应重子数守恒，而单态轴矢流在考虑量子修正之后出现反常$\partial_{\mu}A^{\mu}=\frac{3g_3^2}{32\pi^2}\epsilon_{\mu\nu\rho\sigma}\mathcal{G}_a^{\mu\nu}\mathcal{G}_a^{\rho\sigma}$。
+
+但是实际的QCD是具有质量项的，因此手征对称性遭到破坏，矢量流和轴矢流在经典情况下也不严格守恒，有
+\begin{align}
+   \begin{aligned}
+   \partial_{\mu} V^{\mu}_a = &\mbox{i}\bar{q}\Big[\mathcal{M},\frac{\lambda_a}{2}\Big]q,\\
+   \partial_{\mu} A^{\mu}_a = &\mbox{i}\bar{q}\gamma_5\Big\{\frac{\lambda_a}{2},\mathcal{M}\Big\}q,\\
+   \partial_{\mu}V^{\mu}=& 0,\\
+   \partial_{\mu}A^{\mu}=&2\mbox{i}\bar{q}\gamma_5\mathcal{M}q,
+   \end{aligned}
+\end{align}
+其中$\mathcal{M}=diag\{m_u,m_d,m_s\}$为质量矩阵。可以看出，如果三种夸克质量一样，则质量矩阵为单位矩阵，矢量流严格守恒。如果质量矩阵很小，矢量流和轴矢流也近似守恒。由于u、d夸克质量相近，且远小于s夸克质量，因此$SU(2)_L\times SU(2)_R$群对称性就比$SU(3)_L\times SU(3)_R$对称性要好很多。
+
 
 定义三个荷算符
 \begin{align}
