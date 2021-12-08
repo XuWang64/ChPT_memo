@@ -213,7 +213,7 @@
 
 \section{介绍}
 该章主要参考\cite{scherer2011primer}\cite{郑汉青2019量子场论上}。
-
+\subsection{简介}
 首先QCD的拉氏量具有如下形式(仅考虑u、d、s夸克)
 \begin{align}
    \mL=\sum_{i=1}^{3}(\bar{q}_i \mbox{i} \slashed{D} q_i-m_i \bar{q}_i q_i)-\frac{1}{4}\mathcal{G}_{\mu \nu}^a \mathcal{G}^{a \mu \nu} 
@@ -326,7 +326,7 @@
    \delta \mL_0 = \bar{q}_R \left(\sum_{a=1}^8\partial_{\mu}\varepsilon_{Ra}\frac{\lambda_a}{2}+\partial_{\mu}\varepsilon_R\right)\gamma^{\mu} q_R + \bar{q}_L \left(\sum_{a=1}^8\partial_{\mu}\varepsilon_{La}\frac{\lambda_a}{2}+\partial_{\mu}\varepsilon_R\right)\gamma^{\mu} q_L
 \end{align}
 因此产生的左手流和右手流分别为
-\begin{align}
+\begin{align}\label{curr}
    \begin{aligned}
       L^{\mu}_a &= \bar{q}_L\gamma^{\mu}\frac{\lambda_a}{2}q_L, R^{\mu}_a = \bar{q}_R\gamma^{\mu}\frac{\lambda_a}{2}q_R \\
       L^{\mu} &= \bar{q}_L\gamma^{\mu}q_L, R^{\mu} = \bar{q}_R\gamma^{\mu}q_R
@@ -356,8 +356,7 @@
 \end{align}
 其中$\mathcal{M}=diag\{m_u,m_d,m_s\}$为质量矩阵。可以看出，如果三种夸克质量一样，则质量矩阵为单位矩阵，矢量流严格守恒。如果质量矩阵很小，矢量流和轴矢流也近似守恒。由于u、d夸克质量相近，且远小于s夸克质量，因此$SU(2)_L\times SU(2)_R$群对称性就比$SU(3)_L\times SU(3)_R$对称性要好很多。
 
-
-定义三个荷算符
+根据（\ref{curr}）定义三个荷算符：
 \begin{align}
    \begin{aligned}
       Q_{La}(t) &= \int \mbox{d}^3x q_L^{\dagger}(t,\vec{x}) \frac{\lambda_a}{2}q_L(t,\vec{x})\\
@@ -373,48 +372,69 @@
    \end{aligned}
 \end{align}
 
+验证第一个对易关系：
+\begin{align*}
+   [Q_{La},Q_{Lb}] =& \int \mbox{d}^3x \mbox{d}^3y \Bigl[q_L^{\dagger}(t,\vec{x})\frac{\lambda^a}{2}q_L(t,\vec{x}),q_L^{\dagger}(t,\vec{y})\frac{\lambda^a}{2}q_L(t,\vec{y})\Bigr] \\
+   =&\int \mbox{d}^3x \mbox{d}^3y \Bigl[q^{\dagger}(t,\vec{x})P_L\frac{\lambda^a}{2}q(t,\vec{x}),q^{\dagger}(t,\vec{y})P_L\frac{\lambda^a}{2}q(t,\vec{y}\Bigr])\\
+   =&\int \mbox{d}^3x \mbox{d}^3y \delta^3(\vec{x}-\vec{y})q^{\dagger}(t,\vec{x})P_L\frac{\lambda_a}{2}\frac{\lambda_b}{2}q(t,\vec{y})\\
+   &-\int \mbox{d}^3x \mbox{d}^3y \delta^3(\vec{x}-\vec{y})q^{\dagger}(t,\vec{y})P_L\frac{\lambda_a}{2}\frac{\lambda_b}{2}q(t,\vec{x})\\
+   =& \mbox{i}f_{abc}\int \mbox{d}^3xq^{\dagger}(t,\vec{x})P_L\frac{\lambda_c}{2}q(t,\vec{x})=\mbox{i}f_{abc}Q^{Lc}
+\end{align*}
 
-
-\subsection{Goldstone玻色子的实现}
-在手征极限下，系统拉氏量(\ref*{L_QCD})具有$SU(3)_L\times SU(3)_R \times U(1)_V$的对称性，但当考虑夸克凝聚的时候，基态只有$SU(3)_V \times U(1)_V$的对称性，系统的对称性发生了自发破缺，生成了8个无质量的Goldstone玻色子。由于真实的夸克带有微小质量，因此拉氏量不具备严格的$SU(3)_L\times SU(3)_R \times U(1)_V$的对称性，破缺得到的Goldstone玻色子带有质量。
-
-一般考虑，假设有大群G，以及它的子群H，拉氏量具有群G对称性，基态具有群H对称性，则会生成$n=n_G-n_H$个Goldstone玻色子，每个Goldstone玻色子用$\phi_i$标记，为光滑实函数，$i=1,...,n$，定义一个n分量的矢量$\bm{\Phi}=(\phi_1,...,\phi_n)$，接着定义一个实向量空间
+除此之外，还可以得到流之间的对易关系如下：
 \begin{align}
-   M_1 = \{\bm{\Phi}:M^4 \to \mathbb{R^n}| \phi_i: M^4\to R\}
-\end{align}
-定义一个映射$\varphi : G \times M_1 \to M_1$，满足
-\begin{itemize}
-   \item 
-   $\varphi(e,\bm{\Phi})=\bm{\Phi}$
-   \item 
-   $\varphi(g_1,\varphi(g_2,\bm{\Phi}))=\varphi(g_1 g_2 ,\bm{\Phi})$
-\end{itemize}
-用\bm{\Phi}表示$M_1$中的原点，\textcolor{blue}{对应系统的基态构型}，则对于$\forall h \in H$，存在$\varphi(h,0)=0$，从而可以建立起$G/H$陪集与Goldstone玻色子之间的同构关系。可以验证，对于同一陪集中的元素，原点被映射到同一矢量，而不同陪集中的元素将原点映射到不同矢量。
-
-考查Goldstone玻色子在群G下的变换行为，对于每一个$\bm{\Phi}$有一个陪集$\tilde{g}H$与之对应，表示为
-\begin{align*}
-   \varphi(g,\bm{\Phi})=\varphi(\tilde{g}h,0)
-\end{align*}
-接着用$\varphi(g)$作用到$\bm{\Phi}$上
-\begin{align*}
-   \varphi(g,\bm{\Phi})=\varphi(g,\varphi(\tilde{g}h,0))=\bm{\Phi}^{\prime}
-\end{align*}
-即存在关系
-\begin{center}
-\begin{math}
    \begin{aligned}
-      \bm{\Phi} &\stackrel{g}{\longrightarrow} &\bm{\Phi}^{\prime}\\
-      \downarrow &&\uparrow\\
-      \tilde{g}H &\stackrel{g}{\longrightarrow}& g \tilde{g}H
+   [V^0_a(t,\vec{x}),V^{\mu}_b(t,\vec{y})] =& \delta^3(\vec{x}-\vec{y})\mbox{i}f_{abc}V^{\mu}_c(t,\vec{X}),\\
+   [V^0_a(t,\vec{x}),V^{\mu}(t,\vec{y})] =& 0,\\
+   [V^0_a(t,\vec{x}),A^{\mu}_b(t,\vec{y})] =& \delta^3(\vec{x}-\vec{y})\mbox{i}f_{abc}A^{\mu}_c(t,\vec{X}),\\
+   [A^0_a(t,\vec{x}),V^{\mu}_b(t,\vec{y})] =& \delta^3(\vec{x}-\vec{y})\mbox{i}f_{abc}A^{\mu}_c(t,\vec{X}),\\
+   [A^0_a(t,\vec{x}),V^{\mu}(t,\vec{y})] =& 0,\\
+   [A^0_a(t,\vec{x}),A^{\mu}_b(t,\vec{y})] =& \delta^3(\vec{x}-\vec{y})\mbox{i}f_{abc}V^{\mu}_c(t,\vec{X}).\\
    \end{aligned}
-\end{math}
-\end{center}
+\end{align}
 
-% \section{线性$\sigma$ 模型}
-% 线性$\sigma$模型的拉氏量如下
+% \subsection{对称性的破缺}
+
+% \subsection{Goldstone玻色子的实现}
+% 在手征极限下，系统拉氏量(\ref*{L_QCD})具有$SU(3)_L\times SU(3)_R \times U(1)_V$的对称性，但当考虑夸克凝聚的时候，基态只有$SU(3)_V \times U(1)_V$的对称性，系统的对称性发生了自发破缺，生成了8个无质量的Goldstone玻色子。由于真实的夸克带有微小质量，因此拉氏量不具备严格的$SU(3)_L\times SU(3)_R \times U(1)_V$的对称性，破缺得到的Goldstone玻色子带有质量。
+
+% 一般考虑，假设有大群G，以及它的子群H，拉氏量具有群G对称性，基态具有群H对称性，则会生成$n=n_G-n_H$个Goldstone玻色子，每个Goldstone玻色子用$\phi_i$标记，为光滑实函数，$i=1,...,n$，定义一个n分量的矢量$\bm{\Phi}=(\phi_1,...,\phi_n)$，接着定义一个实向量空间
 % \begin{align}
-%    \mL = 
+%    M_1 = \{\bm{\Phi}:M^4 \to \mathbb{R^n}| \phi_i: M^4\to R\}
 % \end{align}
+% 定义一个映射$\varphi : G \times M_1 \to M_1$，满足
+% \begin{itemize}
+%    \item 
+%    $\varphi(e,\bm{\Phi})=\bm{\Phi}$
+%    \item 
+%    $\varphi(g_1,\varphi(g_2,\bm{\Phi}))=\varphi(g_1 g_2 ,\bm{\Phi})$
+% \end{itemize}
+% 用\bm{\Phi}表示$M_1$中的原点，\textcolor{blue}{对应系统的基态构型}，则对于$\forall h \in H$，存在$\varphi(h,0)=0$，从而可以建立起$G/H$陪集与Goldstone玻色子之间的同构关系。可以验证，对于同一陪集中的元素，原点被映射到同一矢量，而不同陪集中的元素将原点映射到不同矢量。
+
+% 考查Goldstone玻色子在群G下的变换行为，对于每一个$\bm{\Phi}$有一个陪集$\tilde{g}H$与之对应，表示为
+% \begin{align*}
+%    \varphi(g,\bm{\Phi})=\varphi(\tilde{g}h,0)
+% \end{align*}
+% 接着用$\varphi(g)$作用到$\bm{\Phi}$上
+% \begin{align*}
+%    \varphi(g,\bm{\Phi})=\varphi(g,\varphi(\tilde{g}h,0))=\bm{\Phi}^{\prime}
+% \end{align*}
+% 即存在关系
+% \begin{center}
+% \begin{math}
+%    \begin{aligned}
+%       \bm{\Phi} &\stackrel{g}{\longrightarrow} &\bm{\Phi}^{\prime}\\
+%       \downarrow &&\uparrow\\
+%       \tilde{g}H &\stackrel{g}{\longrightarrow}& g \tilde{g}H
+%    \end{aligned}
+% \end{math}
+% \end{center}
+
+% % \section{线性$\sigma$ 模型}
+% % 线性$\sigma$模型的拉氏量如下
+% % \begin{align}
+% %    \mL = 
+% % \end{align}
 
 
 
@@ -422,11 +442,11 @@
 \subsection{手征的power-counting}
 手征拉氏量一般具有如下形式
 \begin{align}
-   \mL_{eff} = \mL_2 + \mL_4 + \mL_4,
+   \mL_{\text{eff}} = \mL_2 + \mL_4 + \mL_6+\cdots,
 \end{align}
-其中只包含偶数项。这主要是由于Lorentz不变性以及质量项$\sim\mO(q^2)$。
+其中只包含偶数项。这主要是由于Lorentz不变性以及质量项是$\sim\mO(q^2)$的。
 
-对于给定费曼图，在$p_i \mapsto t p_i$以及$m_q \mapsto t^2 m_q$变换下，若散射振幅变换如下
+对于给定费曼图，在$p_i \mapsto t p_i$以及$m_q \mapsto t^2 m_q$变换下，若不变振幅变换如下
 \begin{align}
    M(tp_i,t^2m_q) = t^D M(p_i,m_q),
 \end{align}
@@ -434,9 +454,30 @@
 \begin{align}
    D = nN_L-2N_I + \sum_{k=1}^{\infty} 2k N_{2k},
 \end{align}
-其来源简单阐述如下，在上述标度变化下，内线的变换为$t^{n-2}$，顶点的变换为$t^{2k-n}$，由于散射矩阵的不变性，以及$S\sim\delta^n(q)M$，因此需要添加一个$n$来补偿$\delta$函数的影响，再考虑到一张图中独立圈数、内线数、顶点数之间的关系$N_L = N_I - (N_V - 1)$，即可得到上式。
+其来源简单阐述如下，在上述标度变化下，传播子的变换如下
+\begin{align}
+   \begin{aligned}
+      \int \frac{\mbox{d}^nk}{(2\pi)^n}\frac{\mbox{i}}{k^2-M^2+\mbox{i}\epsilon} 
+      \mapsto& \int \frac{\mbox{d}^nk}{(2\pi)^n}\frac{\mbox{i}}{t^2(k^2/t^2-M^2+\mbox{i}\epsilon)}\\
+      \stackrel{k=tk^{\prime}}{=}& t^{n-2}\int \frac{\mbox{d}^n k^{\prime}}{(2\pi)^n}\frac{\mbox{i}}{k^{\prime 2}-M^2+\mbox{i}\epsilon},
+   \end{aligned}
+\end{align}
+因此内线的变换为$t^{n-2}$，而顶点的变换为
+\begin{align}
+   \delta^n(q)q^{2k} \mapsto t^{2k-n}\delta^n{q}q^{2k},
+\end{align}
+因此内线的变化为$t^{2k-n}$，此外由于散射矩阵的不变性，以及$S\sim\delta^n(q)M$，因此需要加上一个$n$来补偿$\delta$函数的影响，此时我们可以得到
+\begin{align}
+   D = n + (n-2)N_I + \sum_{k=1}^{\infty} N_{2k}(2k-n).
+\end{align}
+再考虑到一张图中独立圈数、内线数、顶点数之间的关系$N_L = N_I - (N_V - 1)$，其中$N_V=\sum_{k=1}^{\infty}N_{2k}$，即可得到上式。
 
 \subsection{手征拉氏量}
+首先考虑QCD的拉氏量如下，
+\begin{align}
+   \mL=\sum_{i=1}^{3}(\bar{q}_i \mbox{i} \slashed{D} q_i-m_i \bar{q}_i q_i)-\frac{1}{4}\mathcal{G}_{\mu \nu}^a \mathcal{G}^{a \mu \nu},
+\end{align}
+
 首先每一项的阶数如下，
 \begin{align}
    U=\mathcal{O}(q^0),D_{\mu}U,r_{\mu},l_{\mu}=\mO (q), f_{L,R \mu \nu}=\mO(q^2), \chi = \mO (q^2),
