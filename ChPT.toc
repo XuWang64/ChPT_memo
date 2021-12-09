@@ -1,7 +1,10 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}介绍}{2}{section.1}%
-\contentsline {subsection}{\numberline {1}简介}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {2}流代数}{3}{subsection.1.2}%
-\contentsline {section}{\numberline {2}介子的手征拉氏量}{5}{section.2}%
-\contentsline {subsection}{\numberline {1}手征的power-counting}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2}手征拉氏量}{6}{subsection.2.2}%
+\contentsline {section}{\numberline {1}介绍}{1}{section.1}%
+\contentsline {subsection}{\numberline {1}简介}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {2}流代数}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}介子的手征拉氏量}{4}{section.2}%
+\contentsline {subsection}{\numberline {1}手征的power-counting}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2}外源}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {3}两个常数}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {4}最低阶手征拉氏量}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {5}$\pi -\pi $散射的例子}{9}{subsection.2.5}%

@@ -119,7 +119,7 @@
  \renewcommand\contentsname{目录}
 \tableofcontents
 \newpage 
-
+\setcounter{page}{1}
 % \section{有效量子力学}
 % 该章主要参考\cite{kaplan2016lectures}。
 % 当我们在描述低能理论时，我们不需要知道其在高能区的表现。代价就是需要引入大量参数，而这些参数只能由实验给出。在考察有效量子场论前，我们先看看有效量子力学。
@@ -225,31 +225,30 @@
    \sum_{i} m_i \bar{q}_i q_i = \sum_{i,j} \bar{q}_{R,i} M_{ij} q_{L,j}
 \end{align}
 其中$M=diag(m_u,m_d,m_s)$。如果我们将质量项升级为场，在最后结果的时候在取回常数，并假设其在手征变换下进行如下变换，
-\begin{align}
+\begin{align}\label{rml}
    M \to RML^{\dagger}
 \end{align}
-则拉氏量依然在$SU(3)_L \times SU(3)_R$变换下不变。
+则拉氏量依然在$SU(3)_L \times SU(3)_R$变换下不变，由于质量项引起的系统对称性破缺是显式破缺。
 
-除质量项的显式破缺外，当考虑夸克凝聚的时候，系统也会自发破缺，考虑QCD真空
-\begin{align}
+但除质量项的显式破缺外，当考虑夸克凝聚的时候，系统也会自发破缺，考虑QCD真空
+\begin{align}\label{cds}
    \langle 0 | \bar{q}_{R,i} q_{L,j}| 0 \rangle =\Lambda ^3 \delta_{ij}
 \end{align}
-其中$\Lambda$具有质量量纲。其在$SU(3)_L \times SU(3)_R$下按照$(3,\bar{3})$变换。
-在手征变换下，
+其中$\Lambda$具有质量量纲\cite{kaplan2016lectures}。上式在$SU(3)_L \times SU(3)_R$下按照$(3,\bar{3})$变换如下，
 \begin{align}
    L_{im}\langle 0 | \bar{q}_{R,n} q_{L,m}| 0 \rangle R^{\dagger}_{nj}=\Lambda ^3 U_{ij}
 \end{align}
-其中$U_{ij}=(LR^{\dagger})_{ij}$。当$L=R$时，真空没有变化，此时恰好对应$SU(3)_V$。
+其中$U_{ij}=(LR^{\dagger})_{ij}$为$SU(3)$中的矩阵。当$L=R$时，$\Sigma_{ij}=\delta_{ij}$，对应真空没有变化，说明QCD凝聚在$SU(3)_V$下不变。当$L\neq R$时，$\Sigma_{ij}$代表此时系统已经变换到了一个和（\ref{cds}）不同的真空。如果此时没有质量项的显式破缺，则两个真空简并。
 
 我们可以采用和质量类似的方式，将$U$升级为场，并将其参数化为
 \begin{align}
-   U(x)=exp[\frac{i}{f} \phi(x)],\ \phi(x)=T^a \phi^a(x)
+   U(x)=exp[\frac{2\mbox{i} }{f} \phi(x)],\ \phi(x)=T^a \phi^a(x)
 \end{align}
-其中，$\phi^a(x)$为破缺生成的8个Goldstone玻色子。
+其中，$\phi^a(x)$为破缺生成的8个Goldstone玻色子，$T^a$是$SU(3)$群的生成元。
 
 当N=2时，
 \begin{align}
-   \phi \equiv \sum_{i=1}^{3} \phi_a \sigma^a =
+   \phi \equiv \sum_{a=1}^{3} \phi_a \sigma^a =
    \begin{pmatrix}
       \phi_3 & \phi_1 - \mbox{i} \phi_2 \\
       \phi_1 + \mbox{i} \phi_2) & -\phi_3
@@ -261,8 +260,9 @@
 \end{align}
 
 当N=3时，
-\begin{align}
-   \phi \equiv \begin{pmatrix}
+\begin{align}\label{n3phi}
+   \phi \equiv =\sum_{a=1}^{8} \phi_a \lambda^a =
+   \begin{pmatrix}
       \pi^0+\frac{\eta}{3} & \sqrt{2}\pi^+ & \sqrt{2}K^+ \\
       \sqrt{2}\pi^- & -\pi^0+\frac{\eta}{3} &\sqrt{2}K^0 \\
       \sqrt{2}K^- & \sqrt{2}\bar{K}^0 & -\frac{2\eta}{3}
@@ -472,20 +472,195 @@
 \end{align}
 再考虑到一张图中独立圈数、内线数、顶点数之间的关系$N_L = N_I - (N_V - 1)$，其中$N_V=\sum_{k=1}^{\infty}N_{2k}$，即可得到上式。
 
-\subsection{手征拉氏量}
+\subsection{外源}
+该章主要参考\cite{scherer2011primer}。
+
+通常在量子场论中，紫外的微观理论与红外的理论可以截然不同，如QCD。低能有效作用量是通过积掉一些高能的自由度来得到的。但是在实际操作中很难实行，我们往往首先猜测红外的场以及可能的对称性，然后写下与对称性自洽的有效有效作用，最后再在实验中进行检验。
+
 首先考虑QCD的拉氏量如下，
 \begin{align}
-   \mL=\sum_{i=1}^{3}(\bar{q}_i \mbox{i} \slashed{D} q_i-m_i \bar{q}_i q_i)-\frac{1}{4}\mathcal{G}_{\mu \nu}^a \mathcal{G}^{a \mu \nu},
+   \mL_{QCD}^0=\sum_{i=1}^{3}\bar{q}_i \mbox{i} \slashed{D} q_i-\frac{1}{4}\mathcal{G}_{\mu \nu}^a \mathcal{G}^{a \mu \nu},
+\end{align}
+上述拉氏量具有$SU(3)_L\times SU(3)_R$的味道对称性，如果想要引入局域的味道空间的变换，我们需要引入以下外源（类似于规范理论中的规范场），
+\begin{align}
+   \mL = \mL_{QCD}^0 + \mL_{ext},
+\end{align}
+其中
+\begin{align}
+   \begin{aligned}
+   \mL_{ext} =& \sum_{a=1}^8 v_a^{\mu} \bar{q} \gamma_{\mu}\frac{\lambda_a}{2}q + v_{(s)}^{\mu}\frac{1}{3}\bar{q}\gamma_{\mu}q + \sum_{a=1}^8 a_{a}^{\mu} \bar{q} \gamma_{\mu} \gamma_5 \frac{\lambda_a}{2}q\\
+   &-\sum_{a=0}^{8}s_{a}\bar{q}\lambda_{a}q + \sum_{a=0}^{8}p_{a}\mbox{i}\bar{q}\gamma_5 \lambda_a q\\
+   =&\bar{q}\gamma_{\mu}\Bigl(v^{\mu}+\frac{1}{3}v_{(s)}^{\mu}+\gamma_5 a^{\mu}\Bigr)q -\bar{q}(s-\mbox{i}\gamma_5 p)q,
+   \end{aligned}
+\end{align}
+其中
+\begin{align}
+   v_{\mu} = v_{\mu}^a\frac{\lambda_a}{2},a_{\mu} = a_{\mu}^a\frac{\lambda_a}{2},s_{\mu} = s_{\mu}^a\frac{\lambda_a}{2},p_{\mu} = p_{\mu}^a\frac{\lambda_a}{2},
+\end{align}
+分别是引入的矢量、轴矢量、标量和赝标量外场。当我们取外源$v^{\mu}=v_{(s)}^{\mu}=a^{\mu}=p=0$以及$s=diag(m_u,m_d,m_s)$是，上述拉氏量回到原始QCD拉氏量。
+
+我们可以将上述拉氏量通过手征投影算符改写为
+\begin{align}
+   \begin{aligned}
+   \mL =& \mL_{QCD}^0 + \bar{q}_L\gamma^{\mu}\Bigl(l_{\mu}+\frac{1}{3}v_{\mu}^{(s)}\Bigr)q_L + \bar{q}_R\gamma_{\mu}\Bigl(r_{\mu}+\frac{1}{3}v_{\mu}^{(s)}\Bigr)\\
+   & -\bar{q}_R(s+\mbox{i}p)q_L - \bar{q}_L(s-\mbox{i}p)q_R,
+   \end{aligned}
+\end{align}
+其中$r_{\mu}=v_{\mu}+a_{\mu},l_{\mu}=v_{\mu}-a_{\mu}$。如果想要上述拉氏量在$SU(3)_L\times SU(3)_R$下保持不变，即
+\begin{align}
+   \begin{aligned}
+   q_R &\mapsto V_R(x)q_R\\
+   q_L &\mapsto V_L(x)q_L,
+   \end{aligned}
+\end{align}
+则需要外场作如下变换
+\begin{align}
+   \begin{aligned}
+   r_{\mu} &\mapsto V_R r_{\mu} V_R^{\dagger} + \mbox{i} V_R \partial_{\mu} V_R^{\dagger},\\
+   l_{\mu} &\mapsto V_L l_{\mu} V_L^{\dagger} + \mbox{i} V_L \partial_{\mu} V_L^{\dagger},\\
+   v_{\mu}^{(s)} &\mapsto v_{\mu}  - \partial_{\mu} \Theta,\\
+   s + \mbox{i}p &\mapsto V_R(s+\mbox{i}p)V_L^{\dagger},\\
+   s - \mbox{i}p &\mapsto V_L(s-\mbox{i}p)V_R^{\dagger}.
+   \end{aligned}
+\end{align}
+除了要求拉氏量在上述局域$SU(3)_L\times SU(3)_R$下保持不变之外，我们还要求拉氏量能够满足C、P、T对称。由于CPT定理的存在，因此我们可以只考虑C、P变换下上述外场的变换情况。
+
+在P变换下，夸克场和拉氏量的变换为
+\begin{align}
+   q_f(t,\vec{x})\stackrel{P}{\mapsto} \gamma_0 q_f(t,-\vec{x}), \mL(t,\vec{x}) \stackrel{P}{\mapsto} \mL(t,-\vec{x}),
+\end{align}
+因此外场的变换为
+\begin{align}
+   v^{\mu}\stackrel{P}{\mapsto} v_{\mu},v_{(s)}^{\mu}\stackrel{P}{\mapsto} v^{(s)}_{\mu},a^{\mu}\stackrel{P}{\mapsto} -a_{\mu},s\stackrel{P}{\mapsto} s,p\stackrel{P}{\mapsto}-p.
+\end{align}
+同理可得C变换下外场的变换为
+\begin{align}
+   v_{\mu}\stackrel{C}{\mapsto} -v^T_{\mu},v^{(s)}_{\mu}\stackrel{C}{\mapsto} -v^{(s)T}_{\mu},a_{\mu}\stackrel{C}{\mapsto} a^T_{\mu},s\stackrel{C}{\mapsto} s^T,p\stackrel{C}{\mapsto}p^T.
 \end{align}
 
-首先每一项的阶数如下，
+考虑一个简单的例子，QED是U(1)规范理论，而U(1)群是$SU(3)_L\times SU(3)_R$的子群。我们可以令
 \begin{align}
-   U=\mathcal{O}(q^0),D_{\mu}U,r_{\mu},l_{\mu}=\mO (q), f_{L,R \mu \nu}=\mO(q^2), \chi = \mO (q^2),
+   r_{\mu} = l_{\mu} = -e \mathcal{A}_{\mu} Q,
 \end{align}
-其中$U$是Goldstone玻色子的实现，$U=exp(\mbox{i}\phi_a \lambda_a/F_0)$，而$r_{\mu},l_{\mu}$是协变导数中的规范场，$f_{L,R \mu \nu}$是相应的场强张量，$\chi = 2B_0(s+\mbox{i}p)$。因此可以写出二阶的手征拉式量如下，
+其中$Q=diag(2/3,-1/3,-1/3)$，此时可以得到
+\begin{align}
+   \begin{aligned}
+      \mL_{\text{ext}} &= -e\mathcal{A}_{\mu}(\bar{q}_L Q \gamma_{\mu} q_L + \bar{q}_R Q \gamma_{\mu}q_R)=-e\mathcal{A}_{\mu}\bar{q}Q\gamma_{\mu}q\\
+      &=-e\mathcal{A}_{\mu}\Bigl(\frac{2}{3}\bar{u}\gamma_{\mu}u-\frac{1}{3}\bar{d}\gamma_{\mu}d-\frac{1}{3}\bar{s}\gamma_{\mu}s\Bigr)=-e\mathcal{A}_{\mu} J^{\mu},
+   \end{aligned}
+\end{align}
+即光子场和夸克场的耦合。
+
+\subsection{两个常数}
+首先我们已经将破缺的8个Goldstone玻色子参数化为
+\begin{align}
+   U(x) = \text{exp}\Bigl(\frac{\mbox{i}\phi(x)}{F_0}\Bigr),
+\end{align}
+其中$\phi$取自（\ref{n3phi}）式，$F_0$为手征极限下$\pi$介子的真空衰变常数，带有质量量纲。$U$在$SU(3)_L\times SU(3)_R$群下的变换方式为
+\begin{align}
+   U(x) \mapsto RU(x)L^{\dagger}.
+\end{align}
+
+此时，我们能写下的包含最少导数且保证手征不变的拉氏量为
+\begin{align}
+   \mL_{\text{eff}}=\frac{F_0^2}{4}\text{Tr}(\partial_{\mu}U\partial^{\mu}U^{\dagger}).
+\end{align}
+考虑无穷小的$SU(3)_L$变换，可以得到左手流为
+\begin{align}
+   J^{\mu}_{La}=\mbox{i}\frac{F_0^2}{4}\text{Tr}(\lambda_a\partial^{\mu}U^{\dagger}U),
+\end{align}
+同理可得右手流为
+\begin{align}
+   J^{\mu}_{Ra}=-\mbox{i}\frac{F_0^2}{4}\text{Tr}(\lambda_aU\partial^{\mu}U^{\dagger}).
+\end{align}
+
+定义矢量流和轴矢流分别为
+\begin{align}
+   J_{Va}^{\mu}=&J_{Ra}^{\mu}+J_{La}^{\mu}=-\mbox{i}\frac{F_0^2}{4}\text{Tr}(\lambda_a[U,\partial^{\mu}U^{\dagger}]),\\
+   J_{Aa}^{\mu}=&J_{Ra}^{\mu}-J_{La}^{\mu}=-\mbox{i}\frac{F_0^2}{4}\text{Tr}(\lambda_a\{U,\partial^{\mu}U^{\dagger}\}).
+\end{align}
+将$U$做泰勒展开，我们可以得到轴矢流最低阶为
+\begin{align}
+   J^{\mu}_{Aa}=-F_0\partial^{\mu}\phi_a+\cdots,
+\end{align}
+此时我们可以计算轴矢流在Goldstone玻色子和真空态之间的矩阵元为
+\begin{align}
+   \langle 0|J^{\mu}_{Aa}(x)|\phi_b(p)\rangle = \langle 0|-F_0 \partial^{\mu}\phi_a(x)|\phi_b(x)\rangle=\mbox{i}p^{\mu}F_0\text{exp}(-\mbox{i}p \cdot x)\delta_{ab},
+\end{align}
+从中我们可以看到$F_0$的物理意义。
+
+严格的对称性破缺我们可以得到严格的零质量Goldstone玻色子，但是通过实验我们知道$\pi,K$等介子是有质量的，因此我们必须引入QCD中显式的质量破缺项，且假设质量矩阵按照（\ref{rml}）进行变换。则此时我们能写下的拉氏量为
+\begin{align}
+   \mL_{\text{s.b.}}=\frac{F_0^2B_0}{2}\text{Tr}(\mathcal{M}U^{\dagger}+U\mathcal{M^{\dagger}}),
+\end{align}
+其中下标$\text{s.b.}$代表对称性破缺。通过比较其基态能量密度关于夸克质量的导数和QCD中相应量
+\begin{align}
+   \langle \mathcal{H}_{\text{eff}}\rangle_{min}=-F_0^2B_0(m_u+m_d+m_s),\\
+   \frac{\partial\langle 0|\mathcal{H}_{\text{QCD}}|0\rangle}{\partial m_q}\Big|_{m_u=m_d=m_s=0}=\frac{1}{3}\langle\bar{q}q\rangle_0
+\end{align}
+可得，
+\begin{align}
+   3F_0^2B_0=-\langle\bar{q}q\rangle_0,
+\end{align}
+即$B_0$与标量单态夸克凝聚有关。
+
+接着将$U$进行泰勒展开，我们可以得到
+\begin{align}
+   \mathcal{L}_{\text{s.b.}} = -\frac{B_0}{2}\text{Tr}(\phi^2\mathcal{M})+\cdots
+\end{align}
+代入（\ref{n3phi}）式，我们可以得到
+\begin{align}
+   \begin{aligned}
+   \text{Tr}(\phi^2\mathcal{M})=&2(m_u+m_d)\pi^{+}\pi^{-}+2(m_u+m_s)K^{+}K^{-}+2(m_d+m_s)K^0\bar{K}^0\\
+   &+(m_u+m_d)\pi^0\pi^0+\frac{2}{\sqrt{3}}(m_u-m_d)\pi^0\eta+\frac{m_u+m_d+4m_s}{3}\eta^2.
+   \end{aligned}
+\end{align}
+为简单起见，令$m_u=m_d=\hat{m}$，因此我们可以得到在最低阶Goldstone玻色子质量和夸克质量的关系
+\begin{align}
+   M_{\pi}^2=&2B_0\hat{m},\\
+   M_k^2=&B_0(\hat{m}+m_s),\\
+   M_{\eta}^2=&\frac{2}{3}B_0(\hat{m}+2m_s).
+\end{align}
+此时我们可以得到著名的Gell-Mann-Okubo关系：
+\begin{align}
+   4M_K^2=3M_{\eta}^2+M_{\pi}^2.
+\end{align}
+
+
+
+
+
+
+
+\subsection{最低阶手征拉氏量}
+有了上面的准备之后，我们就可以开始构造手征拉氏量了。
+
+首先，我们需要定义场算符的协变导数，以场算符$A$为例，协变导数为
+\begin{align}
+   D_{\mu}A=\partial_{\mu}A-\mbox{i}r_{\mu}A+\mbox{i}Al_{\mu}.
+\end{align}
+可以验证，协变导数在$SU(3)_L\times SU(3)_R$群下的变换方式为
+\begin{align}
+   D_{\mu}A \mapsto R(D_{\mu}A)L^{\dagger}.
+\end{align}
+由于有效拉氏量中会包含任意高阶的导数项，因此我们还需要引入外场的场强张量
+\begin{align}
+   f_{R\mu\nu}=&\partial_{\mu}r_{\nu}-\partial_{\nu}r_{\mu}-\mbox{i}[r_{\mu},r_{\nu}],\\
+   f_{L\mu\nu}=&\partial_{\mu}l_{\nu}-\partial_{\nu}l_{\mu}-\mbox{i}[l_{\mu},l_{\nu}].
+\end{align}
+接着我们定义一个标量和赝标量外场的线性组合项$\chi=2B_0(s+\mbox{i}p)$。
+
+由于手征拉氏量是按照外动量阶数展开的，因此我们需要知道它们关于外动量的阶数，如下所示，
+\begin{align}
+   U=\mathcal{O}(q^0),D_{\mu}U=\mathcal{O}(q),r_{\mu},l_{\mu}=\mO (q), f_{L,R \mu \nu}=\mO(q^2), \chi = \mO (q^2),
+\end{align}
+因此可以写出满足对称性要求的二阶的手征拉式量如下，
 \begin{align}
    \mL_2 =\frac{F_0^2}{4} Tr[D_{\mu}U (D^{\mu}U)^{\dagger}] + \frac{F_0^2}{4} Tr[\chi U^{\dagger} + U \chi^{\dagger}],
 \end{align}
+其中包含两个低能常数$F_0$和$B_0$。
+
+\subsection{$\pi-\pi$散射的例子}
 
 
 
