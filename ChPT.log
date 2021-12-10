@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.11.23)  10 DEC 2021 02:12
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.11.23)  10 DEC 2021 17:21
 entering extended mode
 **./ChPT.tex
 (ChPT.tex
@@ -1222,11 +1222,27 @@ Package hyperref Warning: Option `colorlinks' has already been used,
  [1
 
 ]
+
+LaTeX Warning: Citation `scherer2011primer' on page 1 undefined on input line 2
+15.
+
+
+LaTeX Warning: Citation `郑汉青2019量子场论上' on page 1 undefined on input line 215.
+
+
+LaTeX Warning: Citation `kaplan2016lectures' on page 1 undefined on input line 
+237.
+
 LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.5393
 7> not available
 (Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on
  input line 270.
- [1] [2] [3] [4] [5] [6] [7] [8]
+[1] [2] [3] [4]
+
+LaTeX Warning: Citation `scherer2011primer' on page 5 undefined on input line 4
+76.
+
+[5] [6] [7] [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 663.
@@ -1243,17 +1259,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 663.
 
-[9] (ChPT.bbl) [10] (ChPT.aux)
+[9]
+No file ChPT.bbl.
+(ChPT.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `ChPT.out' has not changed.
 (rerunfilecheck)             Checksum: 89EE1D3883977C39D3A809E994A88B31;856.
  ) 
 Here is how much of TeX's memory you used:
- 30722 strings out of 411275
- 637353 string characters out of 2834257
- 993828 words of memory out of 3000000
- 50624 multiletter control sequences out of 15000+600000
- 410889 words of font info for 76 fonts, out of 8000000 for 9000
+ 30699 strings out of 411275
+ 636240 string characters out of 2834257
+ 993829 words of memory out of 3000000
+ 50606 multiletter control sequences out of 15000+600000
+ 410873 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,18n,97p,415b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ChPT.pdf (11 pages).
+Output written on ChPT.pdf (10 pages).
