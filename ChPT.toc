@@ -8,3 +8,4 @@
 \contentsline {subsection}{\numberline {3}两个常数}{6}{subsection.2.3}%
 \contentsline {subsection}{\numberline {4}最低阶手征拉氏量}{8}{subsection.2.4}%
 \contentsline {subsection}{\numberline {5}$\pi -\pi $散射的例子}{9}{subsection.2.5}%
+\contentsline {subsection}{\numberline {6}超出领头阶}{12}{subsection.2.6}%

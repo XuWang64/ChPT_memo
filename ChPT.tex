@@ -11,6 +11,7 @@
 \allowdisplaybreaks[4]  %公式环境换行
 \numberwithin{equation}{section}
 \usepackage{slashed} %费曼slashed
+\usepackage{simplewick} %wick收缩
 \usepackage[left=2cm,right=2cm,top=2.54cm,bottom=2.54cm]{geometry}
 %\usepackage[dvipdfm,pdfstartview=FitH]{hyperref}
 %\usepackage{cancel}
@@ -97,7 +98,7 @@
 \newcommand{\mO}{\mathcal{O}}
 \newcommand{\mL}{\mathcal{L}}
 \newcommand{\bm}[1]{\mbox{\boldmath{$#1$}}}
-
+\newcommand{\Tr}{\text{Tr}}
 \allowdisplaybreaks
 
 
@@ -277,7 +278,7 @@
 \end{align}
 由于上述协变导数是作用到色空间中，因此在$U(3)_L \times U(3)_R$味群作用下保持不变。
 
-考虑局域的$U(3)_L \times U(3)_R$群变换，则场的变化如下
+考虑整体的$U(3)_L \times U(3)_R$群变换，则场的变化如下
 \begin{align*}
    \begin{pmatrix}
       u_L\\
@@ -481,7 +482,7 @@
 \begin{align}
    \mL_{QCD}^0=\sum_{i=1}^{3}\bar{q}_i \mbox{i} \slashed{D} q_i-\frac{1}{4}\mathcal{G}_{\mu \nu}^a \mathcal{G}^{a \mu \nu},
 \end{align}
-上述拉氏量具有$SU(3)_L\times SU(3)_R$的味道对称性，如果想要引入局域的味道空间的变换，我们需要引入以下外源（类似于规范理论中的规范场），
+上述拉氏量具有$SU(3)_L\times SU(3)_R$的味道对称性，如果想要引入局域的味道空间的变换，我们需要引入以下外源（类似于规范理论中的规范场）\cite{GASSER1984142}\cite{GASSER1985465}，
 \begin{align}
    \mL = \mL_{QCD}^0 + \mL_{ext},
 \end{align}
@@ -654,11 +655,11 @@
 \begin{align}
    U=\mathcal{O}(q^0),D_{\mu}U=\mathcal{O}(q),r_{\mu},l_{\mu}=\mO (q), f_{L,R \mu \nu}=\mO(q^2), \chi = \mO (q^2),
 \end{align}
-因此可以写出满足对称性要求的二阶的手征拉式量如下，
+因此可以写出满足对称性要求的二阶的手征拉式量如下\cite{GASSER1985465}，
 \begin{align}
-   \mL_2 =\frac{F_0^2}{4} Tr[D_{\mu}U (D^{\mu}U)^{\dagger}] + \frac{F_0^2}{4} Tr[\chi U^{\dagger} + U \chi^{\dagger}],
+   \mL_2 =\frac{F_0^2}{4} \text{Tr}[D_{\mu}U (D^{\mu}U)^{\dagger}] + \frac{F_0^2}{4} \text{Tr}[\chi U^{\dagger} + U \chi^{\dagger}],
 \end{align}
-其中包含两个低能常数$F_0$和$B_0$。
+在这里我们舍弃了不满足$P$宇称的$\text{Tr}[\chi U^{\dagger}-U\chi^{\dagger}]$项，其中包含两个低能常数$F_0$和$B_0$。
 
 \subsection{$\pi-\pi$散射的例子}
 考虑一个$SU(2)_L\times SU(2)_R$的二阶拉氏量，即$m_u=m_d=0$，而$m_s$依旧取其物理值，且令$r_{\mu}=l_{\mu}=0$，
@@ -677,8 +678,184 @@ U=\text{exp}\Bigl(\mbox{i}\frac{\phi}{F}\Bigr),
 \begin{pmatrix}
    \pi^0 & \sqrt{2}\pi^{+}\\
    \sqrt{2}\phi^{-} & -\pi^0
-\end{pmatrix}.
+\end{pmatrix},
 \end{align*}
+不带有下标0的$F$和$B$表示我们此时考虑的对称性是$SU(2)_L\times SU(2)_R$。我们将
+\begin{align}
+   U = 1 +\mbox{i}\frac{\phi}{F}-\frac{1}{2}\frac{\phi^2}{F^2}-\frac{\mbox{i}}{6}\frac{\phi^3}{F^3}+\frac{1}{24}\frac{\phi^4}{F^4}+\cdots
+\end{align}
+代入，可得
+\begin{align}
+   \mL_2 =\mL_2^{2\phi}+\mL_2^{4\phi}+\cdots, 
+\end{align}
+因为$\mL$不包含三点相互作用，因此最低阶相互作用项为
+\begin{align}
+   \mL_2^{4\phi}=\frac{1}{6F^2}(\phi_i\partial^{\mu}\phi_i\partial_{\mu}\phi_j\phi_j-\phi_i\phi_i\partial_{\mu}\phi_j\partial^{\mu}\phi_j)+\frac{M^2}{24F^2}\phi_i\phi_i\phi_j\phi_j,
+\end{align}
+其中$M^2=2B\hat{m}$。
+
+我们可以计算上述相互作用项的矩阵元，例如
+\begin{align}
+   \langle p_c,c;p_d,d|\phi_i\partial^{\mu}\phi_i\partial_{\mu}\phi_j\phi_j|p_a,a;p_b,b\rangle
+\end{align}
+的收缩方式共24种，以其中一种为例
+\begin{align*}
+   \begin{aligned}
+   \bcontraction[1ex]{p}{_c}{,c;p_d,d|\phi}{_i}
+   \bcontraction[1ex]{p_c,c;p_d,d|\phi_i\partial^{\mu}\phi_i\partial_{\mu}}{\phi}{_j\phi_j|p}{_a}
+   \bcontraction[2ex]{p_c,c;p}{_d}{,d|\phi_i\partial^{\mu}}{\phi}
+   \bcontraction[2ex]{p_c,c;p_d,d|\phi_i\partial^{\mu}\phi_i\partial_{\mu}\phi_j\phi}{_j}{|p_a,a;p}{_b}
+   \langle p_c,c;p_d,d|\phi_i\partial^{\mu}\phi_i\partial_{\mu}\phi_j\phi_j|p_a,a;p_b,b\rangle\\
+   \Rightarrow \delta_{ic}\mbox{i}p_{d}^{\mu}\delta_{id}(-\mbox{i}p_{a\mu}\delta_{ja}\delta_{jb})=
+   p_a \cdot p_d \delta_{ab}\delta_{cd}
+   \end{aligned}
+\end{align*}
+因此对应如图\ref{pipi}所示的费曼图，可以得到其散射振幅为
+\begin{figure}
+   \centering
+   \includegraphics[scale=0.4]{l2pipi.png}
+   \caption{最低阶$\pi\pi$散射}\label{pipi}
+\end{figure}
+
+\begin{align}
+   \begin{aligned}
+   \mathcal{M} =& \mbox{i}\Bigl[\delta_{ab}\delta_{cd}\frac{s-M^2}{F^2}+\delta_{ac}\delta_{bd}\frac{t-M^2}{F^2}+\delta_{ad}\delta_{bc}\frac{u-M^2}{F^2}\Bigr]
+   \\
+   & - \frac{\mbox{i}}{3F^2}(\delta_{ab}\delta_{cd}+\delta_{ac}\delta_{bd}+\delta_{ad}\delta_{bc})(\Lambda_a+\Lambda_b+\Lambda_c+\Lambda_d),
+\end{aligned}
+\end{align}
+其中$\Lambda_k=p_k^2-M^2$。
+通常对于$\pi_a(p_a)+\pi_b(p_b)\to \pi_c(p_c)+\pi_d(p_d)$过程的$T$矩阵（$\mathcal{M}=\mbox{i}T$）可以参数化为
+\begin{align}\label{tpipi}
+   T_{ab;cd}(p_a,p_b;p_c,p_d)=\delta_{ab}\delta_{cd}A(s,t,u)+\delta_{ac}\delta_{bd}A(t,s,t)+\delta_{ad}\delta_{bc}A(u,t,s)。
+\end{align}
+其中$A(s,t,u)=A(s,u,t)$。可以看出在$\mathcal{O}(q^2)$阶，
+\begin{align}
+   A(s,t,u)=\frac{s-M^2}{F^2}.
+\end{align}
+
+
+
+除了手征之外，我们还通常利用同位旋对称性来研究$\pi\pi$散射，在$SU(2)$极限下，$\pi$介子组成同位旋三重态，因此强相互作用是同位旋不变的。对于$T$矩阵，我们可以写出
+\begin{align}
+   \langle I^{\prime},I^{\prime}_3|T|I,I_3\rangle = T^I \delta_{II^{\prime}}\delta_{I_3I_3^{\prime}}。
+\end{align}
+因此$\pi\pi$散射的同位旋振幅可以根据（\ref{tpipi}）式拆解为\cite{GASSER1984142}
+\begin{align}
+   \begin{aligned}
+   T^{I=0}&=3A(s,t,u)+A(t,u,s)+A(u,s,t),\\
+   T^{I=1}&=A(s,t,u)-A(u,s,t),\\
+   T^{I=2}&=A(t,u,s)+A(u,s,t).
+   \end{aligned}
+\end{align}
+计算开启域附近的$T$矩阵，我们可以得到s波的散射长度
+\begin{align}\label{a}
+   T^{I=0}|_{\text{thr}} = 32\pi a_0^0,\ T^{I=2}|_{\text{thr}}=32\pi a_0^2,
+\end{align}
+其中$a$的上标代表同位旋，下标代表s波散射。由于玻色对称性，$T^{I=1}=0$。结合手征理论，我们可以得到两个散射长度的值。
+
+首先，我们有
+\begin{align}
+   A(s_{\text{thr}},t_{\text{thr}},u_{\text{thr}})=\frac{3M_{\pi}^2}{F_{\pi}^2},
+\end{align}
+其中$F_{\pi}$、$M_{\pi}$和$F$、$M$的区别仅在$\mathcal{Q}(p^4)$开始显现。在这里，我们先用带有下标的表示。
+因此，对于不同的同位旋振幅我们有
+\begin{itemize}
+ 
+\item I=0:
+\begin{align}
+   \begin{aligned}
+   T^{I=0}|_{\text{thr}}=&[3A(s,t,u)+A(t,u,s)+A(u,s,t)]|_{\text{thr}}\\
+   =&[2A(s,t,u)+A(s,t,u)+A(t,u,s)+A(u,s,t)]|_{\text{thr}}\\
+   =&\frac{6M_{\pi}^2}{F_{\pi}^2}+\frac{[s+t+u-3M_{\pi}^2]|_{\text{thr}}}{F_{\pi}^2}\\
+   =&\frac{7M_{\pi}^2}{F_{\pi}^2}.
+   \end{aligned}
+\end{align}
+\item I=2:
+\begin{align}
+   \begin{aligned}
+   T^{I=2}|_{\text{thr}}=&[A(t,u,s)+A(u,s,t)]|_{\text{thr}}\\
+   =&[A(t,u,s)+A(u,s,t)+A(s,t,u)-A(s,t,u)]|_{\text{thr}}\\
+   =&\frac{M_{\pi}^2}{F_{\pi}^2}-\frac{3M_{\pi}^2}{F_{\pi}^2}\\
+   =&-\frac{2M_{\pi}^2}{F_{\pi}^2}.
+\end{aligned}
+\end{align}
+代回（\ref{a}）式，我们可以得到
+\begin{align}
+   a_0^0=\frac{7M_{\pi}^2}{32F_{\pi}^2}=0.159,\ a_0^2 = -\frac{M_{\pi}^2}{16\pi F_{\pi}^2}=-0.0454,
+\end{align}
+在这里我们代入了$F_{\pi}=92.4\text{MeV}$和$M_{\pi}=M_{\pi^+}=139.57\text{MeV}$。
+
+\end{itemize}
+
+\subsection{超出领头阶}
+我们在这里直接给出$\mathcal{O}(q^6)$的拉氏量\cite{GASSER1985465}
+\begin{align}
+   \begin{aligned}
+      \mL_4 = &L_1\Bigl\{\text{Tr}[D_{\mu}U(D^{\mu}U)^{\dagger}]\Bigr\}^2+L_2\text{Tr}[D_{\mu}(D_{\nu}U)^{\dagger}]\Tr[D^{\mu}U(D^{\nu})^{\dagger}]\\
+      & +L_3\Tr[D_{\mu}U(D^{\mu}U)^{\dagger}D_{\nu}U(D^{\nu}U)^{\dagger}]+L_4\Tr[D_{\mu}U(D^{\mu}U)^{\dagger}]\Tr(\chi U^{\dagger}+U\chi^{\dagger})\\
+      & +L_5\Tr[D_{\mu}U(D^{\mu}U)^{\dagger}(\chi U^{\dagger}+U\chi^{\dagger})]+L_6[\Tr(\chi U^{\dagger}+U\chi^{\dagger})]^2\\
+      & +L_7[\Tr(\chi U^{\dagger}-U\chi^{\dagger})]^2+L_8\Tr(U\chi^{\dagger}U\chi^{\dagger}+\chi U^{\dagger}\chi U^{\dagger})\\
+      & -\mbox{i}L_9\Tr[f_{\mu\nu}^R D^{\mu}U(D^{\nu}U)^{\dagger}+f_{\mu\nu}^L (D^{\mu}U)^{\dagger}D^{\nu}U]+L_{10}\Tr(Uf_{\mu\nu}^L U^{\dagger}f^{\mu\nu}_R)\\
+      & +H_1\Tr(f_{\mu\nu}^Rf_R^{\mu\nu}+f_{\mu\nu}^Lf_L^{\mu\nu})+H_2\Tr(\chi\chi^{\dagger}).
+   \end{aligned}
+\end{align}
+这里每项前面的系数同$F_0$和$B_0$一样，目前没法通过理论决定，只能由实验给出。
+
+\textbf{$\mathcal{O}(q^4)$阶的Goldstone玻色子的质量}
+为了计算Goldstone玻色子的只能，在这里我们忽略外场，且假设$m_u=m_d=\hat{m}$，$m_s$取其物理质量。首先，最低阶拉氏量给出的费曼传播子为
+\begin{align}
+   \Delta_{F\phi}(p)=\frac{1}{p^2-M_{\phi,2}^2}+\mbox{i}\epsilon,\ \phi = \pi,K,\eta,
+\end{align}
+其中$M_{\pi,2}^2=2B_0\hat{m},M_{K,2}^2=B_0(\hat{m}+m_s),M_{\eta,2}^2=\frac{2}{3}B_0(\hat{m}+2m_s)$，下标2表示手征二阶给出的结果。用$-\mbox{i}\Sigma_{\phi}(p^2)$代表单粒子不可约图，则完整的传播子为
+\begin{align}
+   \begin{aligned}
+   \mbox{i}\Delta_{\phi}(p)&=\frac{\mbox{i}}{p^2-M^{2}_{\phi,2}+\mbox{i}\epsilon}+\frac{\mbox{i}}{p^2-M^{2}_{\phi,2}+\mbox{i}\epsilon}[-\mbox{i}\Sigma_{\phi}(p^2)]\frac{\mbox{i}}{p^2-M^{2}_{\phi,2}+\mbox{i}\epsilon}+\cdots\\
+   &=\frac{\mbox{i}}{p^2-M^{2}_{\phi,2}-\Sigma_{\phi}(p^2)+\mbox{i}\epsilon}.
+   \end{aligned}
+\end{align}
+物理质量定义在传播子的极点处
+\begin{align}
+   M_{\phi}^2 -M_{\phi,2}^2-\Sigma_{\phi}(M_{\phi}^2)=0
+\end{align}
+
+$\mathcal{O}(q^4)$阶的自能图如图\ref{zineng}所示，
+\begin{figure}
+   \centering
+   \includegraphics[scale=0.7]{4zineng.png}\caption{$\mathcal{O}(q^4)$阶的自能图}\label{zineng}
+\end{figure}
+由图可以看出，我们需要的相互作用拉氏量应具有如下形式
+\begin{align}
+   \mL_{\text{int}}=\mL_2^{4\phi}+\mL_4^{2\phi},
+\end{align}
+其中的$\mL_2^{4\phi}$仿照$\pi\pi$散射的例子可以给出如下
+\begin{align}
+   \mL_2^{4\phi}=\frac{1}{48F_0^2}\Bigl\{\Tr([\phi,\partial_{\mu}\phi][\phi,\partial^{\mu}\phi])+2B_0\Tr(\mathcal{M}\phi^4)\Bigr\}
+\end{align}
+
+观察$\mL_4^{2\phi}$可以发现，由于外场等于0，因此其中正比于$L_9,L_{10},H_1,H_2$的项没有贡献。此外，$L_1,L_2,L_3$的项都是$\mathcal{O}(\phi^4)$的，不需要考虑。因此对于$\mL_4^{2\phi}$有贡献的只能$L_4-L_8$项。以$L_4$为例，
+\begin{align}
+   \begin{aligned}
+      L_4\Tr[D_{\mu}U(D^{\mu}U)^{\dagger}]\Tr(\chi U^{\dagger}+U\chi^{\dagger}) =& L_4\frac{2}{F_0^2}[\partial_{\mu}\eta \partial^{\mu}\eta + \partial_{\mu}\pi^0 \partial^{\mu}\pi^0+2\partial_{\mu}\pi^+\partial_{\mu}\pi^-
+      \\
+      &+2\partial_{\mu}K^+\partial^{\mu}K^-+2\partial_{\mu}K^0\partial^{\mu}\bar{K}^0+\mathcal{O}(\phi^4)]\\
+      &\times [4B_0(2\hat{m}+m_s)+\mathcal{O}(\phi^2)].
+   \end{aligned}
+\end{align}
+对其余项同样分析，则可以得到
+\begin{align}
+   \begin{aligned}
+   \mL_4^{2\phi} =&-\frac{1}{2}(a_{\pi}\pi^0\pi^0+b_{\pi}\partial_{\mu}\pi^0\partial^{\mu})\pi^0 -a_{\pi} \pi^{+}\pi^{-} -b_{\pi}\partial_{\mu}\pi^{+}\partial^{\mu}\pi^{-}\\
+   &-a_K K^+K^--b_K\partial_{\mu}K^{\dagger}\partial^{\mu}K^- -a_K K^0 \bar{K}^0 -b_K \partial_{\mu}K^0\partial^{\mu}\bar{K}^0\\
+   &-\frac{1}{2}(a_{\eta}\eta^2+b_{\eta}\partial_{\mu}\eta\partial^{\mu}\eta),
+   \end{aligned}
+\end{align}
+其中
+\begin{align}
+   \begin{aligned}
+      a_{\pi} = \frac{64B_0^2}{F_0^2}[2\hat{m}+m_s]
+   \end{aligned}
+\end{align}
 
 
 
@@ -687,7 +864,19 @@ U=\text{exp}\Bigl(\mbox{i}\frac{\phi}{F}\Bigr),
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
 \newpage 
 
 \renewcommand\refname{参考文献}
