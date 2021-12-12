@@ -717,7 +717,7 @@ U=\text{exp}\Bigl(\mbox{i}\frac{\phi}{F}\Bigr),
    \caption{最低阶$\pi\pi$散射}\label{pipi}
 \end{figure}
 
-\begin{align}
+\begin{align}\label{mpipi}
    \begin{aligned}
    \mathcal{M} =& \mbox{i}\Bigl[\delta_{ab}\delta_{cd}\frac{s-M^2}{F^2}+\delta_{ac}\delta_{bd}\frac{t-M^2}{F^2}+\delta_{ad}\delta_{bc}\frac{u-M^2}{F^2}\Bigr]
    \\
@@ -789,7 +789,7 @@ U=\text{exp}\Bigl(\mbox{i}\frac{\phi}{F}\Bigr),
 \end{itemize}
 
 \subsection{超出领头阶}
-我们在这里直接给出$\mathcal{O}(q^6)$的拉氏量\cite{GASSER1985465}
+我们在这里直接给出$\mathcal{O}(q^4)$的拉氏量\cite{GASSER1985465}
 \begin{align}
    \begin{aligned}
       \mL_4 = &L_1\Bigl\{\text{Tr}[D_{\mu}U(D^{\mu}U)^{\dagger}]\Bigr\}^2+L_2\text{Tr}[D_{\mu}(D_{\nu}U)^{\dagger}]\Tr[D^{\mu}U(D^{\nu})^{\dagger}]\\
@@ -846,7 +846,7 @@ $\mathcal{O}(q^4)$阶的自能图如图\ref{zineng}所示，
 对其余项同样分析，则可以得到
 \begin{align}
    \begin{aligned}
-   \mL_4^{2\phi} =&-\frac{1}{2}(a_{\pi}\pi^0\pi^0+b_{\pi}\partial_{\mu}\pi^0\partial^{\mu})\pi^0 -a_{\pi} \pi^{+}\pi^{-} -b_{\pi}\partial_{\mu}\pi^{+}\partial^{\mu}\pi^{-}\\
+   \mL_4^{2\phi} =&-\frac{1}{2}(a_{\pi}\pi^0\pi^0+b_{\pi}\partial_{\mu}\pi^0\partial^{\mu}\pi^0) -a_{\pi} \pi^{+}\pi^{-} -b_{\pi}\partial_{\mu}\pi^{+}\partial^{\mu}\pi^{-}\\
    &-a_K K^+K^--b_K\partial_{\mu}K^{\dagger}\partial^{\mu}K^- -a_K K^0 \bar{K}^0 -b_K \partial_{\mu}K^0\partial^{\mu}\bar{K}^0\\
    &-\frac{1}{2}(a_{\eta}\eta^2+b_{\eta}\partial_{\mu}\eta\partial^{\mu}\eta),
    \end{aligned}
@@ -858,27 +858,106 @@ $\mathcal{O}(q^4)$阶的自能图如图\ref{zineng}所示，
       b_{\pi} =& -\frac{16B_0}{F_0^2}[(2\hat{m}+m_s)L_4+\hat{m}L_5],\\
       a_{K} =& \frac{32B_0^2}{F_0^2}\Bigl[(2\hat{m}+m_s)(\hat{m}+m_s)L_6+\frac{1}{2}(\hat{m}+m_s)^2L_8\Bigr],\\
       b_{K} =& -\frac{16B_0}{F_0^2}\Bigl[(2\hat{m}+m_s)L_4+\frac{1}{2}(\hat{m}+m_s)L_5\Bigr],\\
-      a_{\eta} =& \frac{64B_0^2}{3F_0^2}\Bigl[(2\hat{m}_m_s)(\hat{m}+2m_s)L_6+2(\hat{m}-m_s)^2L_7+(\hat{m}^2+2m_s^2)L_8\Bigr],\\
+      a_{\eta} =& \frac{64B_0^2}{3F_0^2}\Bigl[(2\hat{m}-m_s)(\hat{m}+2m_s)L_6+2(\hat{m}-m_s)^2L_7+(\hat{m}^2+2m_s^2)L_8\Bigr],\\
       b_{\eta} =& -\frac{16B_0^2}{F_0^2}\Bigl[(2\hat{m}+m_s)L_4+\frac{1}{3}(\hat{m}+2m_s)L_5\Bigr].
    \end{aligned}
 \end{align}
 
+在$\mathcal{O}(q^4)$阶，自能具有如下形式
+\begin{align}
+   \Sigma_{\phi,4}(p^2) = A_{\phi} + B_{\phi}p^2,
+\end{align}
+其中$A_{\phi},B_{\phi}$来自$\mL_2$的圈图和$\mL_4$树图的贡献。树图水平$\mL_4$的贡献很容易从拉氏量中直接读出，如$\eta$项
+\begin{align}
+   -\mbox{i} \Sigma_{\eta,4}^{\text{tree}}(p^2) = 2\mbox{i}\Bigl[-\frac{1}{2}a_{\eta}-b_{\eta}\frac{1}{2}(\mbox{i}p_{\mu})(-\mbox{i}p^{\mu})\Bigr] = -\mbox{i}(a_{\eta}+b_{\eta}p^2),
+\end{align}
 
+观察$\mL_2^{4\phi}$，我们可以发现只有$\phi\phi\partial\phi\partial\phi$和$\phi^4$项可能存在，其余交叉项在积分之后都会消失。
+以$\pi^0$的自能为例，我们在（\ref{mpipi}）中取$a=c=0,b=d=j,p_a=p_c=p,p_b=p_d=k$，然后对中间变量积分，可以得到
+\begin{align}
+   \mathcal{M}=\frac{1}{2}\int \frac{\mbox{d}^4k}{(2\pi)^4}\frac{\mbox{i}}{3F_0^2}\Bigl(-4p^2-4k^2+5M_{\pi,2}^2\Bigr)\frac{\mbox{i}}{k^2-M_{\pi,2}^2+\mbox{i}\epsilon},
+\end{align}
+其中1/2是对称因子。
 
+我们先将维数正规化中常用的公式先写下来，
+\begin{align}
+   I(M^2,\mu^2,n)=&\mu^{4-n}\int \frac{\mbox{d}^nk}{(2\pi)^n}\frac{\mbox{i}}{k^2-M^2+\mbox{i}\epsilon} = \frac{M^2}{16\pi^2}\Bigl[R+\mbox{ln}\Bigl(\frac{M^2}{\mu^2}\Bigr)\Bigr]+\mathcal{O}(n-4),\\
+   R =&\frac{2}{n-4}-[\mbox{ln}(4\pi)+\Gamma^{\prime}(1)+1].
+\end{align}
 
+因此我们可以得到$\pi^0$的自能图为
+\begin{align}
+   \frac{\mbox{i}}{6F_0^2}(-4p^2+M_{\pi,2}^2) I(M_{\pi,2}^2,\mu^2,n).
+\end{align}
+在考虑所有圈贡献之后，结合树图，我们可以得到
+\begin{align}
+   \begin{aligned}
+      A_{\pi} = \frac{M_{\pi,2}^2}{F_0^2}\Bigl\{-\frac{1}{6}I(M_{\pi,2}^2)-\frac{1}{6}I(M_{\eta,2}^2)-\frac{1}{3}I(M_{K,2}^2)+32[(2\hat{m}+m_s)B_0L_6+\hat{m}B_0L_8]\Bigr\},\\
+      B_{\pi} = \frac{2}{3}\frac{I(M_{\pi,2}^2)}{F_0^2}+\frac{1}{3}\frac{I(M_{K,2}^2)}{F_0^2}-\frac{16B_0}{F_0^2}[(2\hat{m}+m_s)L_4+\hat{m}L_5],
+   \end{aligned}
+\end{align}
+其中带有$I(M^2)$的项均来自于圈贡献，其余项来自树图贡献。
+同理可以得到其他介子的$A_{\phi},B_{\phi}$，如下
+\begin{align}
+   \begin{aligned}
+      A_K=&\frac{M_{K,2}^2}{F_0^2}\Bigl\{\frac{1}{12}I(M_{\eta,2}^2-\frac{1}{4}I(M_{\pi,2}^2))-\frac{1}{2}I(M_{K,2}^2)  \\    
+      & +32\Bigl[(2\hat{m}+m_s)B_0L_6+\frac{1}{2}(\hat{m}+m_s)B_0L_8\Bigr]\Bigr\}\\
+      B_K=&\frac{1}{4}\frac{I(M_{\eta,2}^2)}{F_0^2}+\frac{1}{4}\frac{I(M_{\pi,2}^2)}{F_0^2}+\frac{1}{2}\frac{I(M_{K,2}^2}{F_0^2} -16\frac{B_0}{F_0^2}\Bigl[(2\hat{m}+m_s)L_4+\frac{1}{2}(\hat{m}+m_s)L_5\Bigr],\\
+      A_{\eta} = &\frac{M_{\eta,2}^2}{F_0^2}\Bigl[-\frac{2}{3}I(M_{\eta,2}^2)\Bigr]+\frac{M_{\pi,2}^2}{F_0^2}\Bigl[\frac{1}{6}I(M_{\eta,2}^2)+\frac{1}{3}I(M_{K,2}^2)\Bigr]\\
+      &+\frac{M_{\eta,2}^2}{F_0^2}[16M_{\eta,2}^2L_8+32(2\hat{m}+m_s)B_0L_6]+\frac{128}{9}\frac{B_0^2(\hat{m}-m_s)^2}{F_0^2}(3L_7+L_8),\\
+      B_{\eta}=&\frac{I(M_{K,2}^2)}{F_0^2}-\frac{16}{F_0^2}(2\hat{m}+m_s)B_0L_4-8\frac{M_{\eta,2}^2}{F_0^2}L_5.
+      \end{aligned}
+\end{align}
+这些$A_{\phi},B_{\phi}$显然都是发散的。
 
+利用上面计算的结果我们就可以写出$\mathcal{O}(q^4)$下的质量
+\begin{align}
+   M_{\phi}^2 &= M_{\phi,2}^2 + A_{\phi} + B_{\phi}M_{\phi}^2\\
+   \Rightarrow M_{\phi}^2 = \frac{M_{\phi,2}^2+A_{\phi}}{1-B_{\phi}}&=M_{\phi,2}^2(1+B_{\phi})+A_{\phi}+\mathcal{O}(q^6).
+\end{align}
 
+为抵消发散，重定义$L_i$系数为
+\begin{align}
+   L_i = L_i^r+\frac{\Gamma_i}{32\pi^2}R.
+\end{align}
+将相关数据绘制如表\ref{lr}
+\begin{table}[htp]
+   \centering
+   \begin{tabular}{lll}
+      \hline
+      系数 & 经验数值 & $\Gamma_i$\\
+      \hline
+      $L_4^r$ & -0.3$\pm$ 0.5&$\frac{1}{8}$\\
+      $L_5^r$ & 1.4$\pm$ 0.5&$\frac{3}{8}$\\
+      $L_6^r$ & -0.2$\pm$ 0.3&$\frac{11}{144}$\\
+      $L_7^r$ & -0.4$\pm$ 0.2&0\\
+      $L_8^r$ & -0.9$\pm$ 0.3&$\frac{5}{48}$\\
+      \hline
+   \end{tabular}\caption{系数重整化}\label{lr}
+\end{table}
 
-
-
-
-
-
-
-
-
-
-
+我们将最后所得的结果展示如下
+\begin{align}
+   \begin{aligned}
+   M^{2}_{\pi,4}=&M^2_{\pi,2}\Bigl\{1+\frac{M_{\pi,2}^2}{32\pi^2F_0^2}\text{ln}\Bigl(\frac{M_{\pi,2}^2}{\mu^2}\Bigr) -\frac{M_{\eta,2}^2}{96\pi^2F_0^2}\text{ln}\Bigl(\frac{M_{\eta,2}^2}{\mu^2}\Bigr) \\
+   &+\frac{16}{F_0^2}[(2\hat{m}+m_s)B_0(2L_6^r-L_4^r)+\hat{m}B_0(2L_8^r-L_5^r)]\Bigr\},
+   \end{aligned}
+\end{align}
+\begin{align}
+   \begin{aligned}
+      M_{K,4}^2 = &M_{K,2}^2\Bigl\{1+\frac{M_{\eta,2}^2}{48\pi^2F_0^2}\text{ln}\Bigl(\frac{M_{\eta,2}^2}{\mu^2}\Bigr)\\
+      &+\frac{16}{F_0^2}\Bigl[(2\hat{m}+m_s)B_0(2L_6^r-L_4^r)+\frac{1}{2}(\hat{m}+m_s)B_0(2L_8^r-L_5^r)\Bigr]
+      \Bigr\},
+   \end{aligned}
+\end{align}
+\begin{align}
+   \begin{aligned}
+      M_{\eta,4}^2 =& M_{\eta,2}^2\Bigl[1+\frac{M_{K,2}^2}{16\pi^2F_0^2}\text{ln}\Bigl(\frac{M_{K,2}^2}{\mu^2}\Bigr)-\frac{M_{\eta,2}^2}{24\pi^2F_0^2}\text{ln}\Bigl(\frac{M_{\eta,2}^2}{\mu^2}\Bigr)\\
+      &+\frac{16}{F_0^2}(2\hat{m}+m_s)B_0(2L_6^r-L_4^r)+8\frac{M_{\eta,2}^2}{F_0^2}(2L_8^r-L_5^r)\Bigr]\\
+      &+M_{\pi,2}^2\Bigl[\frac{M_{\eta,2}^2}{96\pi^2F_0^2}\text{ln}\Bigl(\frac{M_{\pi,2}^2}{\mu^2}\Bigr)-\frac{M_{\pi,2}^2}{32\pi^2F_0^2}\text{ln}\bigl(\frac{M_{\pi,2}^2}{\mu^2}\bigr)+\frac{M_{K,2}^2}{48\pi^2F_0^2}\text{ln}\Bigl(\frac{M_{K,2}^2}{\mu^2}\Bigr)\Bigr]\\
+      &+\frac{128}{9}\frac{B_0^2(\hat{m}-m_s)^2}{F_0^2}(3L_7^r+L_8^r).
+   \end{aligned}
+\end{align}
 
 
 
