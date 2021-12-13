@@ -961,7 +961,73 @@ $\mathcal{O}(q^4)$阶的自能图如图\ref{zineng}所示，
 
 \newpage
 \section{重子：$\pi N$散射}
-首先我们考虑构造$\pi N$的有效拉氏量$\mL_{\pi N}^{(1)}$，要求具有$SU(2)_L\times SU(2)_R\times U(1)_V$的局域对称性
+% 我们考虑重子的八重态，定义一个$3\times 3$的无迹矩阵
+% \begin{align}
+%    B=\sum_{a=1}^{8}\frac{B_a \lambda_a}{\sqrt{2}}=
+%    \begin{pmatrix}
+%       \frac{1}{\sqrt{2}}\Sigma^0 + \frac{1}{\sqrt{6}}\Lambda & \Sigma^+ & p \\
+%       \Sigma^- & -\frac{1}{\sqrt{2}}\Sigma^)+\frac{1}{\sqrt{6}}\Lambda & n \\
+%       \Xi^- & \Xi^0 & -\frac{2}{\sqrt{6}}\Lambda 
+%    \end{pmatrix}
+% \end{align}
+% 首先我们考虑构造$\pi N$的有效拉氏量$\mL_{\pi N}^{(1)}$，要求具有$SU(2)_L\times SU(2)_R\times U(1)_V$的局域对称性。
+首先我们用$\Psi$表示核子二重态
+\begin{align}
+   \Psi = \begin{pmatrix}
+      p\\
+      n
+   \end{pmatrix}
+\end{align}
+
+我们知道在$SU(2)_L\times SU(2)_R\times U(1)_V$变换下，$U$和核子二重态的变换规律为
+\begin{align}
+   \begin{pmatrix}
+      U(x)\\
+      \Psi(x)
+   \end{pmatrix}
+   \mapsto
+   \begin{pmatrix}
+      V_R(x)U(x)V_L^{\dagger}(x)\\
+      \text{exp}[-\mbox{i}\Theta(x)]K[V_L(x),V_R(x),U(x)]\Psi(x)
+   \end{pmatrix}
+\end{align}
+其中$K(L,R,U)=\sqrt{RUL^{\dagger}}^{-1}R\sqrt{U}$，而$\text{exp}[-\mbox{i}\Theta(x)]$表示$U(1)_V$的变换。
+
+我们首先定义一个叫手征联络的量
+\begin{align}
+   \Gamma_{\mu}=\frac{1}{2}[u^{\dagger}(\partial_{\mu}-\mbox{i}r_{\mu})+u(\partial_{\mu}-\mbox{i}l_{\mu})u^{\dagger}],
+\end{align}
+其中$u$被定义为$u^2 =U$。然后我们可以定义协变导数
+\begin{align}
+   D_{\mu}\Psi = \Bigl(\partial_{\mu}+\Gamma_{\mu}-\mbox{i}v_{\mu}^{(s)}\Bigr)\Psi.
+\end{align}
+可以证明
+\begin{align}
+   \begin{aligned}
+      D_{\mu}^{\prime}\Psi^{\prime} =& \Bigl[\partial_{\mu}+\Gamma_{\mu}^{\prime} - \mbox{i}(v_{\mu}^{(s)}-\partial_{\mu}\Theta)\Bigr]\text{exp}(-\mbox{i}\Theta)K\Psi\\
+      =&\text{exp}(-\mbox{i}\Theta)K(\partial_{\mu}+\Gamma_{\mu}-\mbox{i}v_{\mu}^{(s)})\Psi.
+   \end{aligned}
+\end{align}
+
+除了手征联络之外，我们再定义一个叫chiral vielbein的量
+\begin{align}
+   u_{\mu}=\mbox{i}[u^{\dagger}(\partial_{\mu}-\mbox{i}r_{\mu})u-u(\partial_{\mu}-\mbox{i}l_{\mu})u^{\dagger}],
+\end{align}
+其在宇称变换下，类似于轴矢流变换。
+
+我们考虑$\pi N$相互作用的有效拉氏量，其应该具有$\bar{\Psi}\hat{O}\Psi$形式，而$\hat{O}$在$SU(2)_L\times SU(2)_R \times U(1)_V$应按照$K\hat{O}K^{\dagger}$这样变换。为了保证拉氏量是厄米的，洛伦兹不变的，且在$C\text{、}P\text{、}T$变换下具有偶宇称，最简单的形式为
+\begin{align}
+   \mL_{\pi N}^{(1)} = \bar{\Psi}(\mbox{i}\slashed{D}-m+\frac{g_A}{2}\gamma^{\mu}\gamma_5u_{\mu})\Psi.
+\end{align}
+
+
+
+
+
+
+
+
+
 
 
 \newpage 
