@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.12.10) (preloaded format=xelatex 2021.12.11)  12 DEC 2021 22:48
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.12.10) (preloaded format=xelatex 2021.12.11)  13 DEC 2021 16:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1327,35 +1327,53 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 664.
 
+[9]
 File: l2pipi.png Graphic file (type bmp)
 <l2pipi.png>
+
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <10.53937> not available
 (Font)              size <10.95> substituted on input line 717.
 
-[9]
 Missing character: There is no 。 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 。 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 。 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 。 in font [lmroman12-regular]:mapping=tex-text;!
-[10] [11]
+[10] [11] [12]
 File: 4zineng.png Graphic file (type bmp)
 <4zineng.png>
- [12] [13] [14] [15] (ChPT.bbl) [16] (ChPT.aux)
+ [13] [14] [15] [16]
+
+LaTeX Font Warning: Font shape `U/stmry/m/n' in size <15.05624> not available
+(Font)              size <14.4> substituted on input line 963.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 963.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\pi' on input line 963.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 963.
+
+[17] (ChPT.bbl) [18] (ChPT.aux)
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.41063pt have occurred.
+(Font)              up to 0.65625pt have occurred.
 
 Package rerunfilecheck Info: File `ChPT.out' has not changed.
-(rerunfilecheck)             Checksum: 36F8993EDFD85BBDADE9F28430DB164E;954.
+(rerunfilecheck)             Checksum: AF84BDC46888A0BAD05CAEDAFFAB18ED;1043.
  ) 
 Here is how much of TeX's memory you used:
- 31711 strings out of 411044
- 671068 string characters out of 2828447
- 1003567 words of memory out of 3000000
- 51814 multiletter control sequences out of 15000+600000
- 414364 words of font info for 94 fonts, out of 8000000 for 9000
+ 31768 strings out of 411044
+ 674096 string characters out of 2828447
+ 1007567 words of memory out of 3000000
+ 51864 multiletter control sequences out of 15000+600000
+ 417870 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,18n,97p,415b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ChPT.pdf (17 pages).
+Output written on ChPT.pdf (19 pages).
