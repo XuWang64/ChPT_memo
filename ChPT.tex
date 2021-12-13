@@ -1017,16 +1017,53 @@ $\mathcal{O}(q^4)$阶的自能图如图\ref{zineng}所示，
 
 我们考虑$\pi N$相互作用的有效拉氏量，其应该具有$\bar{\Psi}\hat{O}\Psi$形式，而$\hat{O}$在$SU(2)_L\times SU(2)_R \times U(1)_V$应按照$K\hat{O}K^{\dagger}$这样变换。为了保证拉氏量是厄米的，洛伦兹不变的，且在$C\text{、}P\text{、}T$变换下具有偶宇称，最简单的形式为
 \begin{align}
-   \mL_{\pi N}^{(1)} = \bar{\Psi}(\mbox{i}\slashed{D}-m+\frac{g_A}{2}\gamma^{\mu}\gamma_5u_{\mu})\Psi.
+   \mL_{\pi N}^{(1)} = \bar{\Psi}(\mbox{i}\slashed{D}-m+\frac{\mathrm{g_A}}{2}\gamma^{\mu}\gamma_5u_{\mu})\Psi.
 \end{align}
+其中包含两个低能有效常数，$m$:核子的质量，$\mathrm{g_A}$:轴矢流耦合常数。这两个常数同样目前没法由理论给出，只能从实验中得到。{\color{blue}我们把这两个量的物理取值分别记为$m=m_N$，$\mathrm{g_A}=g_A$，$g_A$可以从从中子衰变实验中给出$g_A=1.2694\pm 0.0028$。}
 
+考虑最低阶的$\pi N$耦合，并且假设没有外场$l_{\mu}=r_{\mu}=v_{\mu}^{(s)}=0$，因此有
+\begin{align}
+   \Gamma_{\mu}=\frac{1}{2}(u^{\dagger\partial_{\mu}u+u\partial_{\mu}}u^{\dagger}),\ u_{\mu}=\mbox{i}(u^{\dagger}\partial_{\mu}u-u\partial_{\mu}u^{\dagger}).
+\end{align}
+接着同样对$u$进行展开，我们可以得到
+\begin{align}
+   \mL_{\pi N N}^{(1)}=-\frac{\mathrm{g_A}}{2F}\bar{\Psi}\gamma^{\mu}\gamma_5\partial_{\mu}\phi_a\tau_a \Psi,\\
+   \mL_{\pi\pi N N}^{(1)}=-\frac{1}{4F^2}\epsilon_{abc}\bar{\Psi}\gamma^{\mu}\phi_a\partial_{\mu}\phi_b\tau_c \Psi.
+\end{align}
+其中第一项表示赝矢型相互作用，而第二项表示接触相互作用。
 
+从上面的拉氏量中，我们可以得到如下的费曼规则：
+\begin{enumerate}
+   \item 在三点相互作用中，对于入射的$\pi_a(q)$，则写下$-\frac{1}{2}\frac{\mathrm{g_A}}{F}\slashed{q}\gamma_5\tau_a$
+   \item 在接触相互作用中，入射$\pi_a(q)$，出射$\pi_b(q^{\prime})$，则可以写下
+   \begin{align}
+      \mbox{i}\Bigl(-\frac{1}{4F^2}\Bigr)\gamma^{\mu}\epsilon_{cde}[\delta_{da}\delta_{eb}\mbox{i}q^{\prime}_{\mu}+\delta_{db}\delta_{ea}(-\mbox{i}q_{\mu})]\tau_c = \frac{\slashed{q}+\slashed{q}^{\prime}}{4F^2}\epsilon_{abc}\tau_c.
+   \end{align}
+\end{enumerate}
 
-
-
-
-
-
+在考虑$\pi N$散射的时候，我们有如下图
+\begin{figure}[h]
+   \centering
+   \includegraphics{pin4.png}\caption{$\pi N$接触项}
+\end{figure}
+\begin{figure}[h]
+   \centering
+   \includegraphics{pin3s.png}
+   \includegraphics{pin3u.png}\caption{$\pi N$的s道和u道}
+\end{figure}
+因此我们的不变振幅$\mathcal{M}$有
+\begin{align}
+   \begin{aligned}
+   \mathcal{M}_{\text{cont}}=&\bar{u}(p^{\prime})\frac{\slashed{q}+\slashed{q}^{\prime}}{4F^2}\epsilon_{abc}\tau_c u(p) = \mbox{i}\frac{1}{2F^2}\bar{u}(p^{\prime})\frac{1}{2}(\slashed{q}+\slashed{q}^{\prime})\frac{1}{2}[\tau_b,\tau_a]u(p),\\
+   \mathcal{M}_{s+u}=&\mbox{i}\frac{\mathrm{g_A}^2}{4F^2}\bar{u}(p^{\prime})(-\slashed{q}^{\prime})\gamma_5\frac{1}{\slashed{p}+\slashed{q}^{\prime}-m}\slashed{q}\gamma_5\tau_b\tau_a u(p)\\
+   &+\mbox{i}\frac{\mathrm{g_A}^2}{4F^2}\bar{u}(p^{\prime})\slashed{q}\gamma_5\frac{1}{\slashed{p}^{\prime}-\slashed{q}-m}(-\slashed{q}^{\prime})\gamma_5\tau_a\tau_b u(p).
+   \end{aligned}
+\end{align}
+其中$s$和$u$道可以通过交换$a\leftrightarrow b$和$q\leftrightarrow -q^{\prime}$得到，因此我们可以只计算$s$道。
+使用狄拉克方程，我们可以将$\mathcal{M}_s$化简到
+\begin{align}
+   \mathcal{M}_s = \mbox{i}\frac{\mathrm{g_A}^2}{4F^2}\bar{u}(p^{\prime})[(-\slashed{q}^{\prime})+4m^2\gamma_5\frac{1}{\slashed{p}^{\prime}+\slashed{q}^{\prime}-m}\gamma_5+2m]\tau_b\tau_a u(p)
+\end{align}
 
 
 
