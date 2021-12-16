@@ -1142,15 +1142,102 @@ $\mathcal{O}(q^4)$阶的自能图如图\ref{zineng}所示，
    \mathcal{M}_u = \mbox{i}\frac{g_A^2}{4F_{\pi}^2}\bar{u}(p^{\prime})\Bigl[2m_N+\frac{1}{2}(\slashed{q}+\slashed{q}^{\prime})\Bigl(1-\frac{2m_N}{v+v_B}\Bigr)\Bigr]\tau_a \tau_b u(p).
 \end{align}
 
+除了手征之外，我们简单介绍一下过程$\pi_a(q)+N(p)\to \pi_b(q^{\prime})+N(p^{\prime})$的$T$振幅($\mathcal{M}=\mbox{i}T$):
+\begin{align}
+   \begin{aligned}
+   T_{ab}(p,q;p^{\prime},q^{\prime})=&\frac{1}{2}\{\tau_b,\tau_a\}T^{+}(p,q;p^{\prime},q^{\prime})+\frac{1}{2}[\tau_b,\tau_a]T^-(p,q;p^{\prime},q^{\prime})\\
+   =&\delta_{ab}T^+(p,q;p^{\prime},q^{\prime})-\mbox{i}\epsilon_{abc}\tau_cT^-(p,q;p^{\prime},q^{\prime}),
+   \end{aligned}
+\end{align}
+其中
+\begin{align}
+   T^{\pm}(p,q;p^{\prime},q^{\prime})=\bar{u}(p^{\prime})\Bigl[A^{\pm}(v,v_B)+\frac{1}{2}(\slashed{q}+\slashed{q}^{\prime})B^{\pm}(v,v_B)\Bigr]u(p).
+\end{align}
 
+由于$\pi\pi$具有交叉对称性
+\begin{align}
+   T_{ab}(p,q;p^{\prime},q^{\prime})=T_{ba}(p,-q^{\prime};p^{\prime},-q),
+\end{align}
+可以得到
+\begin{align}
+   \begin{aligned}
+      A^+(-v,v_B)=&A^+(v,v_B),\ A^-(-v,v_B)=-A^-(v,v_B),\\
+      B^+(-v,v_B)=&-B^+(v,v_B),\ B^-(-v,v_B)=B^-(-v,v_B).
+   \end{aligned}
+\end{align}
 
+类似与$\pi\pi$散射的同位旋分解，对于$\pi N$散射，我们有
+\begin{align}
+   \begin{aligned}
+   T^{\frac{1}{2}}=&T^++2T^-,\\
+   T^{\frac{3}{2}}=&T^+-T^-.
+   \end{aligned}
+\end{align}
+值得注意的是我们采用的$\pi^+$场和通常采用的$\pi^+$相差一个负号。
 
+结合手征场论给出的结果，我们可以得到$A^{\pm},B^{\pm}$，绘制如表
+\begin{table}[h]
+   \centering
+   \begin{tabular}{cccc}
+      \toprule
+      振幅&PV&接触项&Sum\\
+      \midrule
+      $A^+$&$\frac{g_A^2m_N}{F_{\pi}^2}$&0&$\frac{g_A^2m_N}{F_{\pi}^2}$\\
+      $A^-$&0&0&0\\
+      $B^+$&$-\frac{g_A^2}{F_{\pi}^2}\frac{m_Nv}{v^2-v_B^2}$&0&$-\frac{g_A^2}{F_{\pi}^2}\frac{m_Nv}{v^2-v_B^2}$\\
+      $B^-$&$-\frac{g_A^2}{F_{\pi}^2}\frac{m_Nv_B}{v^2-v_B^2}-\frac{g_A^2}{2F_{\pi}^2}$&$\frac{1}{2F_{\pi}^2}$&$\frac{1-g_A^2}{2F_{\pi}^2}-\frac{g_A^2}{F_{\pi}^2}\frac{m_Nv}{v^2-v_B^2}$\\
+      \bottomrule
+   \end{tabular}
+\end{table}
 
+为了提取出散射长度，我们讨论阈值附近的动力学
+\begin{align}
+   v|_{\text{thr}}=M_{\pi}
+\end{align}
+采用归一化方式
+\begin{align}
+   u(p)\to \sqrt{2m_N}\binom{\chi}{0},\ \bar{u}^{\prime}\to\sqrt{2m_N}\left(\chi^{\prime \dagger} \  0\right)  
+\end{align}
+可以得到
+\begin{align}
+   T|_{\text{thr}}=2m_N\chi^{\prime\dagger}[\delta_{ab}(A^++M_{\pi}B^+)-\mbox{i}\epsilon_{abc}\tau_c(A^-+M_{\pi}B^-)]_{\text{thr}}\chi
+\end{align}
+代入
+\begin{align}
+   [v^2-v_B^2]|_{\text{thr}}=M_{\pi}^2\Bigl(1-\frac{\mu^2}{4}\Bigr),\ \mu=\frac{M_{\pi}}{m_N}=\frac{1}{7},
+\end{align}
+可以得到
+\begin{align}
+   \begin{aligned}
+      T|_{\text{thr}}=&2m_N\chi^{\prime\dagger}\Bigl[\delta_{ab}\Bigl(\frac{g_A^2m_/4N}{F_{\pi}^2}+M_{\pi}\Bigl(-\frac{g_A^2}{F_{\pi}^2}\Bigr)\frac{m_N}{M_{\pi}}\frac{1}{1-\mu^2}\Bigr)\\
+      &-\mbox{i}\epsilon_{abc}\tau_cM_{\pi}\Bigl[\frac{1}{2F_{\pi}^2}-\frac{g_A^2}{2F_{\pi}^2}-\frac{g_A^2}{F_{\pi}^2}\Bigl(-\frac{1}{2}\Bigr)\frac{1}{1-\mu^2/4}\Bigr]\chi.
+      \Bigr]
+   \end{aligned}
+\end{align}
 
-
-
-
-\newpage 
+质心系中微分散射截面有
+\begin{align}
+   \frac{\mbox{d}\sigma}{\mbox{d}\Omega}=\frac{|\vec{q}^{\prime}|}{|\vec{q}|}\Bigl(\frac{1}{8\pi\sqrt{s}}\Bigr)^2|T|^2,
+\end{align}
+在开启阈处
+\begin{align}
+   \frac{\mbox{d}\sigma}{\mbox{d}\Omega}\mid_{\text{thr}}=\Bigl(\frac{1}{8\pi(m_N+M_{\pi})}\Bigr)^2|T|^2_{\text{thr}}=|a|^2.
+\end{align}
+s波散射长度被定义为
+\begin{align}
+   a^{\pm}_{0+}=\frac{1}{8\pi(m_N+M_{\pi})}T^{\pm}|_{\text{thr}}=\frac{1}{4\pi(1+\mu)}[A^{\pm}+M_{\pi}B^{\pm}]|_{\text{thr}},
+\end{align}
+下标$0+$分别表示s波和总轨道角动量。代入$A,B$的值，我们有
+\begin{align}
+   a_{0+}^-=&\frac{M_{\pi}}{8\pi(1+\mu)F_{\pi}^2}[1+\mO(q^2)],\\
+   a_{0+}^+=&-\frac{g_A^2M_{\pi}}{16\pi(1+\mu)F_{\pi}^2}\frac{\mu}{1-\mu^2/4}\sim\mO(q^2).
+\end{align}
+如果代入$a^{\frac{1}{2}}=a_{0+}^++2a_{0+}^-,a^{\frac{3}{2}}=a_{0+}^+-a_{0+}^-$，则可以验证Weiberg-Tomozawa关系。
+\begin{align}
+   a^I=-\frac{M_{\pi}}{8\pi(1+\mu)F_{\pi}^2}\Bigl[I(I+1)-\frac{3}{4}-2\Bigr],
+\end{align}
+其中I是总同位旋。
+\newpage
 
 \renewcommand\refname{参考文献}
 
