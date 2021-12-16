@@ -9,4 +9,7 @@
 \contentsline {subsection}{\numberline {4}最低阶手征拉氏量}{9}{subsection.2.4}%
 \contentsline {subsection}{\numberline {5}$\pi -\pi $散射的例子}{9}{subsection.2.5}%
 \contentsline {subsection}{\numberline {6}超出领头阶}{12}{subsection.2.6}%
-\contentsline {section}{\numberline {3}重子：$\pi N$散射}{17}{section.3}%
+\contentsline {section}{\numberline {3}重子}{17}{section.3}%
+\contentsline {subsection}{\numberline {1}拉氏量}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {2}Goldberger-Treiman关系}{18}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3}$\pi N$散射}{19}{subsection.3.3}%

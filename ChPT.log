@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.12.10) (preloaded format=xelatex 2021.12.15)  15 DEC 2021 23:37
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.12.10) (preloaded format=xelatex 2021.12.15)  17 DEC 2021 00:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1342,45 +1342,44 @@ Missing character: There is no 。 in font [lmroman12-regular]:mapping=tex-text;
 [10] [11] [12]
 File: 4zineng.png Graphic file (type bmp)
 <4zineng.png>
- [13] [14] [15] [16]
-
-LaTeX Font Warning: Font shape `U/stmry/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 963.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 963.
+ [13] [14] [15] [16] [17]
+File: pspin.png Graphic file (type bmp)
+<pspin.png>
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pi' on input line 963.
+(hyperref)                removing `math shift' on input line 1072.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 963.
+(hyperref)                removing `\pi' on input line 1072.
 
-[17]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1072.
+
+[18]
 File: pin4.png Graphic file (type bmp)
 <pin4.png>
 File: pin3s.png Graphic file (type bmp)
 <pin3s.png>
 File: pin3u.png Graphic file (type bmp)
 <pin3u.png>
- [18] [19] (ChPT.bbl) [20] (ChPT.aux)
+ [19] [20] (ChPT.bbl) [21] (ChPT.aux)
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.65625pt have occurred.
+(Font)              up to 0.41063pt have occurred.
 
 Package rerunfilecheck Info: File `ChPT.out' has not changed.
-(rerunfilecheck)             Checksum: AF84BDC46888A0BAD05CAEDAFFAB18ED;1043.
+(rerunfilecheck)             Checksum: 55529BBFCAB68EF1AA98B6160440C1A0;1339.
  ) 
 Here is how much of TeX's memory you used:
- 31822 strings out of 411044
- 676209 string characters out of 2828447
- 1007567 words of memory out of 3000000
- 51913 multiletter control sequences out of 15000+600000
- 417886 words of font info for 111 fonts, out of 8000000 for 9000
+ 31776 strings out of 411044
+ 673311 string characters out of 2828447
+ 1007566 words of memory out of 3000000
+ 51873 multiletter control sequences out of 15000+600000
+ 414380 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,19n,97p,415b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ChPT.pdf (21 pages).
+Output written on ChPT.pdf (22 pages).
